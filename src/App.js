@@ -1,6 +1,9 @@
+import login from "./component/login/login-form";
 
 function App() {
-  return <h1>hello</h1>;
+  return {
+    <login></login>
+  };
 }
 
 export default App;
