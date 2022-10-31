@@ -33,13 +33,9 @@ export default function Login({ settoken }) {
               Đăng Ký
             </button>
           </div>
-
-          <p className="forgot-password text-right mt-2">
-            <a class="forgot-password" href="#">
-              {" "}
-              Quên mật khẩu?
-            </a>
-          </p>
+          <div className="forgot-password">
+            <a href="#"> Quên mật khẩu?</a>
+          </div>
         </div>
       </form>
     </div>
