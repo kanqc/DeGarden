@@ -1,0 +1,19 @@
+.btn-gr {
+    display: flex;
+}
+
+.btn-lock {
+    background-color: red;
+    color: white;
+    width: 5em;
+    height: 2em;
+    margin-right: 1em;
+}
+
+.btn-unlock {
+    background-color: rgb(11, 243, 61);
+    color: white;
+    width: 5em;
+    height: 2em;
+    justify-content: center;
+}
