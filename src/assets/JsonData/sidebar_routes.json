@@ -1,0 +1,47 @@
+[
+    {
+        "display_name": "Trang chủ",
+        "route": "/",
+        "icon": "bx bx-category-alt"
+    },
+    {
+        "display_name": "Người Dùng",
+        "route": "/customers",
+        "icon": "bx bx-user-pin"
+    },
+    {
+        "display_name": "Sản Phẩm",
+        "route": "/products",
+        "icon": "bx bx-package"
+    },
+    {
+        "display_name": "Đơn Hàng",
+        "route": "/orders",
+        "icon": "bx bx-cart"
+    },
+    {
+        "display_name": "Thống Kê",
+        "route": "/analytics",
+        "icon": "bx bx-bar-chart-alt"
+    },
+    {
+        "display_name": "Danh mục sản phẩm",
+        "route": "/categories",
+        "icon": "bx bx-list-ol"
+    },
+    {
+        "display_name": "Khuyến Mãi ",
+        "route": "/discount",
+        "icon": "bx bx-gift"
+    },
+    {
+        "display_name": "inventory",
+        "route": "/inventory",
+        "icon": "bx bx-store-alt"
+    },
+    {
+        "display_name": "settings",
+        "route": "/settings",
+        "icon": "bx bx-cog"
+    }
+]

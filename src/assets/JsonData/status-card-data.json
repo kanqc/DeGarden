@@ -1,0 +1,22 @@
+[
+    {
+        "icon": "bx bx-shopping-bag",
+        "count": "1,995",
+        "title": "Sản Phẩm"
+    },
+    {
+        "icon": "bx bx-cart",
+        "count": "2,001",
+        "title": "Hóa Đơn"
+    },
+    {
+        "icon": "bx bx-dollar-circle",
+        "count": "132",
+        "title": "Người dùng"
+    },
+    {
+        "icon": "bx bx-receipt",
+        "count": "1,711",
+        "title": "Đơn Hàng"
+    }
+]
