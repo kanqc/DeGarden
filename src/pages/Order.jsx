@@ -1,19 +1,26 @@
 import React from "react";
 import Table from "../components/table/Table";
-const ProductsTableHead = ["STT", "Tên Sản Phẩm", "Mô Tả", "Số Lượng ", "Giá"];
+const OrderTableHead = [
+  "STT",
+  "Mã Sản phẩm",
+  "Tên Khách Hàng ",
+  "Số Lượng ",
+  "Khuyến Mãi",
+  "Giá",
+];
 const renderHead = (item, index) => <th key={index}>{item}</th>;
 
-const Products = () => {
+const Order = () => {
   return (
     <div>
-      <h2 className="page-header">Sản Phẩm</h2>
+      <h2 className="page-header">Đơn Hàng</h2>
       <div className="row">
         <div className="col-12">
-          <div className="product">
-            <div className="product__body">
+          <div className="order">
+            <div className="order__body">
               <Table
                 // limit="5"
-                headData={ProductsTableHead}
+                headData={OrderTableHead}
                 renderHead={(item, index) => renderHead(item, index)}
                 // bodyData={customerList}
                 // renderBody={(item, index) => renderBody(item, index)}
@@ -26,4 +33,4 @@ const Products = () => {
   );
 };
 
-export default Products;
+export default Order;

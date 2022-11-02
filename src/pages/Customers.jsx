@@ -12,6 +12,7 @@ const customerTableHead = [
   "Số điện thoại",
   "Địa chỉ",
   "Mật Khẩu",
+  "Giới Tính",
   "Quyền",
   "Chức Năng",
 ];
@@ -31,6 +32,7 @@ const renderBody = (item, index) => (
     <td>{item.phone}</td>
     <td>{item.total_orders}</td>
     <td>{item.total_spend}</td>
+    <td>{item.gender}</td>
     <td>{item.location}</td>
     <td>
       <div className="btn-gr">

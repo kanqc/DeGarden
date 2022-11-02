@@ -5,6 +5,7 @@
         "email": "brois0@unicef.org",
         "location": "Bator",
         "phone": "+62 745 807 7685",
+        "gender": "Male",
         "total_spend": "$557248.44",
         "total_orders": 24011
     },
@@ -14,6 +15,7 @@
         "email": "mjunifer1@buzzfeed.com",
         "location": "Bromma",
         "phone": "+46 993 722 38",
+        "gender": "Male",
         "total_spend": "$599864.94",
         "total_orders": 60195
     },
@@ -23,6 +25,7 @@
         "email": "fbaylay2@purevolume.com",
         "location": "Atalaia",
         "phone": "+55 232 355 3569",
+        "gender": "Male",
         "total_spend": "$171337.47",
         "total_orders": 96328
     },
@@ -32,6 +35,7 @@
         "email": "bmonelli3@amazonaws.com",
         "location": "Martingança",
         "phone": "+351 734 876 8127",
+        "gender": "Male",
         "total_spend": "$335862.78",
         "total_orders": 78768
     },
@@ -41,6 +45,7 @@
         "email": "ishoppee4@webmd.com",
         "location": "Lincoln",
         "phone": "+54 410 442 6083",
+        "gender": "Female",
         "total_spend": "$719845.14",
         "total_orders": 26045
     },
@@ -50,6 +55,7 @@
         "email": "ghaking5@icio.us",
         "location": "Sangzhou",
         "phone": "+86 722 902 9706",
+        "gender": "Female",
         "total_spend": "$621446.73",
         "total_orders": 90771
     },
@@ -59,6 +65,7 @@
         "email": "cacum6@scribd.com",
         "location": "Huzhen",
         "phone": "+86 805 547 3640",
+        "gender": "Female",
         "total_spend": "$640651.30",
         "total_orders": 97842
     },
@@ -68,6 +75,7 @@
         "email": "ahaig7@live.com",
         "location": "Gizel’",
         "phone": "+7 623 158 0485",
+        "gender": "Female",
         "total_spend": "$473255.45",
         "total_orders": 85298
     },
@@ -77,6 +85,7 @@
         "email": "erobardet8@google.co.jp",
         "location": "Uyugan",
         "phone": "+63 406 595 5538",
+        "gender": "Female",
         "total_spend": "$513918.18",
         "total_orders": 38959
     },
@@ -86,6 +95,7 @@
         "email": "nhallatt9@tamu.edu",
         "location": "Liuhao",
         "phone": "+86 194 283 7223",
+        "gender": "Female",
         "total_spend": "$862509.17",
         "total_orders": 48049
     },
@@ -95,6 +105,7 @@
         "email": "sgardenera@mozilla.com",
         "location": "Bosanski Brod",
         "phone": "+387 494 626 9847",
+        "gender": "Female",
         "total_spend": "$385914.28",
         "total_orders": 24961
     }
