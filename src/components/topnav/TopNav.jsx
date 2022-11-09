@@ -8,11 +8,11 @@ import Dropdown from "../dropdown/Dropdown";
 
 import ThemeMenu from "../thememenu/ThemeMenu";
 
-import notifications from "../../assets/JsonData/notification.json";
+import notifications from "../../assets/Data/notification.json";
 
 import user_image from "../../assets/images/user.png";
 
-import user_menu from "../../assets/JsonData/user_menus.json";
+import user_menu from "../../assets/Data/user_menus.json";
 
 const curr_user = {
   display_name: "User",
@@ -47,10 +47,7 @@ const renderUserMenu = (item, index) => (
 const Topnav = () => {
   return (
     <div className="topnav">
-      <div className="topnav__search">
-        <input type="text" placeholder="Tìm Kiếm..." />
-        <i className="bx bx-search"></i>
-      </div>
+      <div className="topnav__search"></div>
       <div className="topnav__right">
         <div className="topnav__right-item">
           {/* dropdown here */}

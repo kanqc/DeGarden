@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState, userEffect } from "react";
 import "./Customers.css";
+import Grid from "@mui/material/Grid";
+import Button from "@mui/material/Button";
 import Table from "../components/table/Table";
 
-import customerList from "../assets/JsonData/customers-list.json";
-
+import customerList from "../assets/Data/customers-list.json";
+import FormDialog from "../components/dialog/dialogcustomer";
 const customerTableHead = [
   "STT",
   "ID",
@@ -16,6 +18,7 @@ const customerTableHead = [
   "Quyền",
   "Chức Năng",
 ];
+
 // const stt = 1;
 // while (stt = 1) {
 //   stt++;
@@ -44,13 +47,27 @@ const renderBody = (item, index) => (
 );
 
 const Customers = () => {
+  const [open, setOpen] = React.useState(false);
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
   return (
     <div>
       <h2 className="page-header">Người Dùng</h2>
+      <Grid align="right">
+        <Button variant="contained" color="primary" onClick={handleClickOpen}>
+          +Thêm
+        </Button>
+      </Grid>
       <div className="row">
         <div className="col-12">
-          <div className="card">
-            <div className="card__body">
+          <div className="customer">
+            <div className="customer__body">
               <Table
                 limit="5"
                 headData={customerTableHead}
@@ -60,6 +77,7 @@ const Customers = () => {
               />
             </div>
           </div>
+          <FormDialog open={open} handleClose={handleClose} />
         </div>
       </div>
     </div>

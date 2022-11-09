@@ -1,0 +1,21 @@
+.form-textfield {
+    display: flex;
+    flex-direction: column;
+}
+
+.item {
+    width: 500px;
+}
+
+.left-form {
+    float: left;
+    display: block;
+}
+
+
+.right-form {
+    margin-left: 25px;
+    float: right;
+    display: block;
+
+}

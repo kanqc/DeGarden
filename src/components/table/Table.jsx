@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import "./table.css";
 
@@ -9,7 +9,6 @@ const Table = (props) => {
       : props.bodyData;
 
   const [dataShow, setDataShow] = useState(initDataShow);
-
   let pages = 1;
 
   let range = [];
@@ -25,12 +24,9 @@ const Table = (props) => {
   const selectPage = (page) => {
     const start = Number(props.limit) * page;
     const end = start + Number(props.limit);
-
     setDataShow(props.bodyData.slice(start, end));
-
     setCurrPage(page);
   };
-
   return (
     <div>
       <div className="table-wrapper">

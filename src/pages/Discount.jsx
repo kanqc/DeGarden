@@ -30,8 +30,8 @@ const discount = () => {
       <h2 className="page-header">Người Dùng</h2>
       <div className="row">
         <div className="col-12">
-          <div className="card">
-            <div className="card__body">
+          <div className="discount">
+            <div className="discount__body">
               <Table
                 // limit="5"
                 headData={discountTableHead}

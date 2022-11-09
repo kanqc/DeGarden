@@ -1,7 +1,7 @@
 import React from "react";
 import "./Categories.css";
 import Table from "../components/table/Table";
-import CategorisList from "../assets/JsonData/categories-list.json";
+import CategorisList from "../assets/Data/categories-list.json";
 
 const CategoryTableHead = ["STT", "Mã Danh Mục ", "Tên Danh Mục "];
 const renderHead = (item, index) => <th key={index}>{item}</th>;
@@ -18,8 +18,8 @@ const Categories = () => {
       <h2 className="page-header">Danh Mục Sản Phẩm</h2>
       <div className="row">
         <div className="col-12">
-          <div className="product">
-            <div className="product__body">
+          <div className="category">
+            <div className="category__body">
               <Table
                 limit="5"
                 headData={CategoryTableHead}

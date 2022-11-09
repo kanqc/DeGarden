@@ -8,7 +8,7 @@ import Table from "../components/table/Table";
 
 import Badge from "../components/badge/Badge";
 
-import statusCards from "../assets/JsonData/status-card-data.json";
+import statusCards from "../assets/Data/status-card-data.json";
 
 const renderCusomerHead = (item, index) => <th key={index}>{item}</th>;
 
