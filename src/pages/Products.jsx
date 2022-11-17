@@ -22,7 +22,7 @@ const Products = () => {
   const handleClose = () => {
     setOpen(false);
   };
-  // Hiển thị sản phẩm
+  //Hiển thị sản phẩm
   useEffect(() => {
     const fetchData = async () => {
       const query = await axios.get(productservices.GRAPHQL_API, {
@@ -30,7 +30,6 @@ const Products = () => {
       });
       setProducts(query);
       console.log(query);
-      console.log("hello");
     };
     fetchData();
   }, []);

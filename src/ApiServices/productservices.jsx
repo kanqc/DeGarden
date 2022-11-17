@@ -1,9 +1,9 @@
 import { gql, useMutation } from "@apollo/client";
 
-export const GRAPHQL_API = "http://localhost:4000/graphiql";
+export const GRAPHQL_API = "http://localhost:4000/";
 
 export const getProducts = gql`
-  query ExampleQuery {
+  query getProductsQuery {
     getAllBonsai {
       data {
         _id
@@ -18,14 +18,14 @@ export const getProducts = gql`
 `;
 
 export const newProducts = gql`
-  mutation CreateBonsai($data: CreateBonsaiInput) {
-    createBonsai(data: $data) {
+  mutation Mutation {
+    createBonsai {
       data {
         _id
-        name
-        quantity
         description
         image
+        name
+        price
       }
     }
   }

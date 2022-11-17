@@ -1,4 +1,5 @@
 import * as React from "react";
+import { useEffect } from "react";
 import "./dialogproduct.css";
 import Button from "@mui/material/Button";
 import Dialog from "@mui/material/Dialog";
@@ -9,11 +10,10 @@ import DialogTitle from "@mui/material/DialogTitle";
 import isEmpty from "validator/lib/isEmpty";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-
 import * as productservices from "../../ApiServices/productservices";
-
 import { TextField } from "@mui/material";
 import { styled } from "@mui/material/styles";
+import axios from "axios";
 // import { TYPE } from "react-toastify/dist/utils";
 
 const StyledDialog = styled(Dialog)`
@@ -23,58 +23,35 @@ const StyledDialog = styled(Dialog)`
 `;
 export default function FormDialogProduct({ open, handleClose }) {
   const [id, setid] = React.useState("");
+
   const [image, setImage] = React.useState("");
-  const [file, setFile] = React.useState([]);
   const [nameProduct, setnameProduct] = React.useState("");
   const [amount, setAmount] = React.useState("");
   const [price, setPrice] = React.useState("");
   const [description, setDescription] = React.useState("");
-  const [validationMsg, setValidationMsg] = React.useState("");
 
-  //tạo sản phẩm mới
-  // const onSubmit = async (e) => {
-  //   const createProduct = await productservices.newProducts(
-  //     nameProduct,
-  //     description,
-  //     amount,
-  //     price,
-  //     file
-  //   );
-  //   handleClose(true);
-  //   toast.success("Thêm Thành Công!");
-  // };
-
-  const onChangeId = (e) => {
-    const value = e.target.value;
-    setid(value);
-  };
-  const validateAll = () => {
-    const msg = {};
-    if (isEmpty(nameProduct)) {
-      msg.nameProduct = "Vui lòng nhập tên sản phẩm";
-
-      setValidationMsg(msg);
-      return true;
-    }
+  const data = {
+    id,
+    image,
+    nameProduct,
+    amount,
+    price,
+    description,
   };
 
-  // const onSubmitValidtion = async (e) => {
-  //   const isValid = validateAll();
-  //   if (isValid) {
-  //     return;
-  //   } else {
-  //     const createProduct = await productservices.newProducts(
-  //       nameProduct,
-  //       description,
-  //       amount,
-  //       price
-  //     );
-  //     // console.log(formdata);
-  //     console.log("true");
-  //     handleClose(true);
-  //     toast.success("Thêm Thành Công!");
-  //   }
-  // };
+  const handleUpImg = (e) => {
+    setImage(e.target.files[0]);
+  };
+
+  const onSubmit = (e) => {
+    const formData = new FormData();
+    formData.set("file", image, "hello");
+    axios.post("", formData, {
+      headers: {
+        "content-type": "multipart/form-data",
+      },
+    });
+  };
 
   return (
     <div>
@@ -100,7 +77,6 @@ export default function FormDialogProduct({ open, handleClose }) {
                     onChange={(e) => setnameProduct(e.target.value)}
                     required
                   />
-                  <p className="text-error">{validationMsg.nameProduct}</p>
                 </div>
                 <div className="item item-3">
                   <TextField
@@ -134,15 +110,7 @@ export default function FormDialogProduct({ open, handleClose }) {
                   />{" "}
                 </div>
                 <div className="item item-6">
-                  <TextField
-                    fullWidth
-                    label="Hình ảnh"
-                    type="file"
-                    id="image"
-                    accept=".png, .jpg, .jpeg"
-                    name="upload_file"
-                    onChange={(e) => setFile(e.target.value)}
-                  />{" "}
+                  <input fullWidth type="file" onChange={handleUpImg}></input>
                 </div>
               </div>
             </div>
@@ -153,7 +121,7 @@ export default function FormDialogProduct({ open, handleClose }) {
           <Button
             type="submit"
             onClick={() => {
-              //onSubmit();
+              onSubmit();
               //   onSubmitValidtion();
             }}
             variant="contained"
