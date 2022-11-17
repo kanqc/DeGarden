@@ -1,8 +1,8 @@
-import { gql, useMutation } from "@apollo/client";
+// import { gql, useMutation } from "@apollo/client";
 
 export const GRAPHQL_API = "http://localhost:4000/";
 
-export const getProducts = gql`
+export const get_Products = `
   query getProductsQuery {
     getAllBonsai {
       data {
@@ -17,7 +17,7 @@ export const getProducts = gql`
   }
 `;
 
-export const newProducts = gql`
+export const newProducts = `
   mutation Mutation {
     createBonsai {
       data {

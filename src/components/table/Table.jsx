@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import "./table.css";
 
 const Table = (props) => {
+  console.log("bodydata", props.bodyData);
   const initDataShow =
     props.limit && props.bodyData
       ? props.bodyData.slice(0, Number(props.limit))

@@ -1,18 +1,17 @@
 import React, { useEffect, useState, memo, useRef } from "react";
 import ReactDOM from "react-dom";
 import { Link } from "react-router-dom";
-import * as productservices from "../ApiServices/productservices";
 import Table from "../components/table/Table";
 import FormDialogProduct from "../components/dialog/dialogproduct";
+import axios from "axios";
 import Grid from "@mui/material/Grid";
 import Button from "@mui/material/Button";
-import axios from "axios";
+import * as Productservices from "../ApiServices/productservices";
 
 import "../pages/csspage/Products.css";
 
 const Products = () => {
   const [data, setData] = useState([]);
-  const [products, setProducts] = useState([]);
   const [open, setOpen] = React.useState(false);
 
   const handleClickOpen = () => {
@@ -25,12 +24,14 @@ const Products = () => {
   //Hiển thị sản phẩm
   useEffect(() => {
     const fetchData = async () => {
-      const query = await axios.get(productservices.GRAPHQL_API, {
-        query: productservices.getProducts,
+      const queryProduct = await axios.post(Productservices.GRAPHQL_API, {
+        query: Productservices.get_Products,
       });
-      setProducts(query);
-      console.log(query);
+      const result = queryProduct.data.data;
+      setData(result.getAllBonsai.data);
+      // console.log(result.getAllBonsai.data);
     };
+
     fetchData();
   }, []);
 
@@ -58,17 +59,18 @@ const Products = () => {
   const renderBody = (item, index) => (
     <tr key={index}>
       <td>{index + 1}</td>
-      <td>{item.categoryId}</td>
+      <td style={{ width: "5%" }}>{item._id}</td>
       <td>{item.name}</td>
-      <td>{item.description}</td>
+      <td style={{ width: "25%", textOverflow: "ellipsis" }}>
+        {item.description}
+      </td>
       <td>{item.price}</td>
       <td>{item.quantity}</td>
-
       <td>
         <image
           style={{
-            width: "115px",
-            height: "108px",
+            width: "55%",
+            height: "25%",
             borderRadius: "13px",
           }}
           src={item.image}
@@ -131,7 +133,7 @@ const Products = () => {
                 limit="10"
                 headData={ProductsTableHead}
                 renderHead={(item, index) => renderHead(item, index)}
-                bodyData={products}
+                bodyData={data}
                 renderBody={(item, index) => renderBody(item, index)}
               />
             </div>
