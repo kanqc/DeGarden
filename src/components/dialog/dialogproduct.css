@@ -19,3 +19,8 @@
     display: block;
 
 }
+
+.text-error {
+    font-size: .75rem;
+    color: red;
+}

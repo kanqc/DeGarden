@@ -1,14 +1,16 @@
 import React, { useState, userEffect } from "react";
-import "./Customers.css";
+import { Link } from "react-router-dom";
+
+import "../pages/csspage/Customers.css";
 import Grid from "@mui/material/Grid";
 import Button from "@mui/material/Button";
 import Table from "../components/table/Table";
-
 import customerList from "../assets/Data/customers-list.json";
+
 import FormDialog from "../components/dialog/dialogcustomer";
 const customerTableHead = [
   "STT",
-  "ID",
+  "Id",
   "Họ Tên",
   "Email",
   "Số điện thoại",
@@ -18,11 +20,8 @@ const customerTableHead = [
   "Quyền",
   "Chức Năng",
 ];
-
-// const stt = 1;
-// while (stt = 1) {
-//   stt++;
-// }
+const handleDelete = () => {};
+const setToUpdate = () => {};
 
 const renderHead = (item, index) => <th key={index}>{item}</th>;
 
@@ -39,8 +38,15 @@ const renderBody = (item, index) => (
     <td>{item.location}</td>
     <td>
       <div className="btn-gr">
-        <button className="btn-lock">Khóa</button>
-        <button className="btn-unlock">Mở Khóa</button>
+        <Link to="/Updatecustomer">
+          <button onClick={() => setToUpdate()} className="btn-update">
+            Sửa{" "}
+          </button>
+        </Link>
+
+        <button onClick={() => handleDelete()} className="btn-delete">
+          Xóa
+        </button>
       </div>
     </td>
   </tr>
@@ -59,6 +65,10 @@ const Customers = () => {
   return (
     <div>
       <h2 className="page-header">Người Dùng</h2>
+      <div className="topnav__search">
+        <input type="text" placeholder="Tìm kiếm người dùng" />
+        <i className="bx bx-search"></i>
+      </div>
       <Grid align="right">
         <Button variant="contained" color="primary" onClick={handleClickOpen}>
           +Thêm

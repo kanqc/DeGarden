@@ -14,6 +14,8 @@ import "./assets/css/theme.css";
 import "./assets/css/index.css";
 
 import Layout from "./components/layout/Layout";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const store = createStore(rootReducer);
 
@@ -23,6 +25,7 @@ ReactDOM.render(
   <Provider store={store}>
     <React.StrictMode>
       <Layout />
+      <ToastContainer />
     </React.StrictMode>
   </Provider>,
   document.getElementById("root")

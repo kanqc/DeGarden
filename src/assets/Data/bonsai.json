@@ -1,0 +1,209 @@
+[
+	{
+		"name" : "Monstera deliciosa",
+		"categoryId" :{"$oid":"6375c2287a807c210ea5171e"},
+		"description":"Với hình dáng lá hết sức đặc biệt, Monstera Deliciosa thường được các nhà thiết kế đưa vào không gian nội thất để tạo điểm nhấn. Chúng còn được đặt tên như Trầu bà lá xẻ, Trầu bà Nam Mỹ… Ở các nước phương tây, bạn dễ dàng bắt gặp nó trong nhiều không gian từ nhà ở, showroom, quán cafe hay văn phòng làm việc. Chúng còn biểu trưng của 1 ngành cây kiểng khi xuất hiện trong logo, các mạng xã hội facebook, instagram hay pinterest.",
+		"price" : 355000,
+		"created_at": 1668661654151,
+		"updated_at": 1668661654151,
+		"image": "../../assets/images/Monstera-Deliciosa.jpg"
+	},
+	{
+		"name" : "Monstera Thai Constellation",
+		"categoryId" :{"$oid":"6375c2287a807c210ea5171e"},
+		"description":"Monstera Thai Constellation hay còn gọi là Monstera chòm sao Thái Lan – một viên ngọc quý thực sự trong số các loại cây trồng trong nhà với vẻ ngoài độc đáo và dễ chăm sóc. Nó sẽ tinh chỉnh và làm phong phú thêm bất kỳ phòng khách nào và biến nó thành một nơi quyến rũ và hạnh phúc để ở. Thời gian của bạn.",
+		"price" : 2500000,
+		"created_at": 1668661654151,
+		"updated_at": 1668661654151,
+		"image": "../../assets/images/Monstera-Thai-Constellation.jpg"
+	},
+	{
+		"name" : "Alocasia Black Velvet",
+		"categoryId" :{"$oid":"6375c2287a807c210ea5171e"},
+		"description":"Alocasia Black Velvet là loại môn có lá dày đen đậm chất mạnh mẽ “nam tính”. Trên mặt lá có lớp nhung có khả năng trượt nước, nước tưới sẽ đọng thành hạt nước hoặc trôi đi chứ không ướt “chèm bẹp” cả chiếc lá. Vân lá màu trắng nổi bật khiến cây nổi bật giữa 1 màu xanh lá truyền thống.",
+		"price" : 295000,
+		"created_at": 1668661654151,
+		"updated_at": 1668661654151,
+		"image": "../../assets/images/Alocasia-Black-Velvet.jpg"
+	},
+	{
+		"name" : "Alocasia Frydek",
+		"categoryId" :{"$oid":"6375c2287a807c210ea5171e"},
+		"description":"Alocasia ở Việt Nam thường gọi là cây Môn, nhưng chỉ có 1 số loại được đặt tên rõ ràng, 1 số thì không, bạn vẫn nên gọi tên khoa học của chúng mới chính xác. Frydek nổi bật với lớp lá nhung xanh ngọc và gân lá màu trắng. Lá có hình dạng tam giác ngược, hơi nhọn ở những điểm kết thúc của gân lá, tạo nên vẻ đẹp đặc biệt của đa số các loại cây Môn.Đây là loại cây thích hợp để trồng trong nhà, tuy nhiên cần đảm bảo nhiều ánh sáng tán xạ cho cây.",
+		"price" : 165000,
+		"created_at": 1668661654151,
+		"updated_at": 1668661654151,
+		"image": "../../assets/images/Alocasia-Frydek.jpg"
+	},
+	{
+		"name" : "Philodendron Billietiae ",
+		"categoryId" :{"$oid":"6375c2287a807c210ea5171e"},
+		"description":"Một loài thực vật có form lá dài, xẻ trái tim sâu ở cuốn lá. Được Frieda Billiet phát hiện lần đầu tiên vào năm 1981 trong rừng mưa nhiệt đới",
+		"price" : 780000,
+		"created_at": 1668661654151,
+		"updated_at": 1668661654151,
+		"image": "../../assets/images/Philodendron_Billietiae.jpg"
+	},
+	{
+		"name" : "Anthurium Clarinervium",
+		"categoryId" :{"$oid":"6375c2287a807c210ea5171e"},
+		"description":"Anthurium Clarinervium nổi bật với những chiếc lá hình trái tim đáng yêu. Lá cây mịn màng như nhung khi áp vào lòng bàn tay của bạn. Bản lá lớn của “nữ hoàng kiểng lá” này khiến bất kỳ ai nhìn thấy cũng sẽ mê mẩn. Nếu bạn không biết bắt đầu từ đâu thì bài viết này sẽ là những tuyệt chiêu chăm sóc cây Anthurium Clarinervium dành riêng cho bạn đấy!",
+		"price" : 350000,
+		"created_at": 1668661654151,
+		"updated_at": 1668661654151,
+		"image": "../../assets/images/Anthurium_Clarinervium.jpg"
+	},
+	{
+		"name" : "Philodendron Florida Ghost",
+		"categoryId" :{"$oid":"6375c2287a807c210ea5171e"},
+		"description":"Philodendron Florida Ghost hay Trầu bà cánh én (Bóng Ma) thuộc họ thực vật Araceae Màu sắc của lá trầu bà cánh én P. Florida Ghost thậm chí còn thú vị hơn hình dạng. Chúng bắt đầu có màu trắng (bóng ma – Ghost), trắng kem hoặc xanh nhạt. Khi chúng già đi một chút, chúng chuyển sang màu vàng xanh khá đẹp mắt. Khi lá của Philodendron Florida đạt độ trưởng thành hoàn toàn, lá sẽ có màu xanh đậm hơn. Cây Philodendron Florida Ghost là một dòng cây có sức sống mạnh cây sinh trưởng nhanh, phù hợp trồng trong nhà, những không gian nhỏ ánh sáng vừa phải. Vườn xuất một vài cây Philodendron Florida Ghost trưởng thành có từ 4-5 lá",
+		"price" : 400000,
+		"created_at": 1668661654151,
+		"updated_at": 1668661654151,
+		"image": "../../assets/images/Philodendron_Florida_Ghost.jpg"
+	},
+	{
+		"name" : "Bàng Singapore",
+		"categoryId" :{"$oid":"6375c2287a807c210ea5171d"},
+		"description":"Cây bàng Singapore là loại cây phong thủy được rất nhiều người biết đến, là sự lựa chọn để trang trí nhà cửa, mang vẻ đẹp hiện đại, sang trọng, tạo ra một không gian thêm sinh động và bắt mắt. Trong phong thủy nhiều người hay sử dụng cây bàng Singapore để làm nơi trang trí vì nó mang nhiều điều may mắn đến cho bản thân và gia đình. ",
+		"price" : 150000,
+		"created_at": 1668661654151,
+		"updated_at": 1668661654151,
+		"image": "../../assets/images/Bang_Singapore.jpg"
+	},
+	{
+		"name" : "Alocasia Longiloba ",
+		"categoryId" :{"$oid":"6375c2287a807c210ea5171e"},
+		"description":"Là loài môn kiểng với form lá dài, thon nhọn như mũi giáo. 2 chiếc “tai thỏ” dài, xẻ sâu ấn tượng mọi ánh nhìn. Màu lá xanh bóng làm bật lên những đường gân lá ánh bạc xếp thành hình xương cá.",
+		"price" : 485000,
+		"created_at": 1668661654151,
+		"updated_at": 1668661654151,
+		"image": "../../assets/images/Alocasia-Longiloba.jpg"
+	},
+	{
+		"name" : "Tùng lá kim",
+		"categoryId" :{"$oid":"6375c2287a807c210ea5171f"},
+		"description":"Là loại cây thân gỗ mang trên mình những tán lá xanh rì, dạng lá kim giúp cây thích nghi được với những điều kiện môi trường khắc nghiệt. Thích hợp trồng trong nhà, đặt trên kệ, bàn làm việc. Vẻ đẹp của cây góp phần nâng cao giá trị trang trí nội ngoại thất làm nổi bật không gian.",
+		"price" : 275000,
+		"created_at": 1668661654151,
+		"updated_at": 1668661654151,
+		"image": "../../assets/images/Tung-La-Kim.jpg"
+	},
+	{
+		"name" : "Ngọc ngân",
+		"categoryId" :{"$oid":"6375c2287a807c210ea5171f"},
+		"description":"Trong phân khúc các loại cây bình dân có thể trồng trong nhà thì Ngọc Ngân là loại cây có màu sắc ấn tượng, sáng sủa, sang trọng",
+		"price" : 145000,
+		"created_at": 1668661654151,
+		"updated_at": 1668661654151,
+		"image": "../../assets/images/Ngoc-Ngan.jpg"
+	},
+	{
+		"name" : "Mường thái",
+		"categoryId" :{"$oid":"6375c2287a807c210ea5171d"},
+		"description":"Lá cây có hình mũi mác, hơi phình ở giữa và thon lại khi về ngọn lá. Mặt lá là những nếp nhăn, căng phồng, song song với đường gân lá. Đồng thời có 1 dãi màu trắng làm điểm nhấn trang trí cũng hiện rõ trên mặt lá. ",
+		"price" : 485000,
+		"created_at": 1668661654151,
+		"updated_at": 1668661654151,
+		"image": "../../assets/images/Muong-Thai.jpg"
+	},
+	{
+		"name" : "Vạn lộc huyết long",
+		"categoryId" :{"$oid":"6375c2287a807c210ea5171f"},
+		"description":"Khác với dòng Vạn Lộc thường thấy, Vạn Lộc Huyết Long Có lá mang trọn màu hồng cam đỏ, và ít màu xanh hơn.",
+		"price" : 249000,
+		"created_at": 1668661654151,
+		"updated_at": 1668661654151,
+		"image": "../../assets/images/Van_Loc_Huyet_Long.jpg"
+	},
+	{
+		"name" : "Anthurium Warocqueanum",
+		"categoryId" :{"$oid":"6375c2287a807c210ea5171e"},
+		"description":"Queen Anthurium cho những chiếc lá nhung dài, nổi lên bởi những đường gân trắng sáng. Thông thường đạt tới độ dài 60-70cm là đã khủng rồi nhưng theo ghi chép thì chúng có thể dài đến tận 2 mét (6 feet).",
+		"price" : 785000,
+		"created_at": 1668661654151,
+		"updated_at": 1668661654151,
+		"image": "../../assets/images/Anthurium_Warocqueanum.jpg"
+	},
+	{
+		"name" : "Begonia Maculata",
+		"categoryId" :{"$oid":"6375c2287a807c210ea5171e"},
+		"description":"Là 1 trong những loại Begonia đẹp, nổi tiếng. Đặc trưng bởi chiếc lá to hình thù không biết gọi thế nào (xem hình đi nhen), màu xanh oliu, mặt dưới lá ửng đỏ. Điểm tô bởi những chấm trắng bạc trên lá. Hoạ tiết chấm bi này 1 giúp Maculata nổi bật hơn bao giờ hết.",
+		"price" : 559000,
+		"created_at": 1668661654151,
+		"updated_at": 1668661654151,
+		"image": "../../assets/images/Begonia_Maculata.jpg"
+	},
+	{
+		"name" : "Caladium White Christmas",
+		"categoryId" :{"$oid":"6375c2287a807c210ea5171e"},
+		"description":"Là 1 trong những loại Caladium được đánh giá có độ trang trí cao. Khi sở hữu lá hình trái tim màu trắng bạc, nhấn nhá bởi những đường gân, viền màu xanh.",
+		"price" : 370000,
+		"created_at": 1668661654151,
+		"updated_at": 1668661654151,
+		"image": "../../assets/images/Caladium-White-Christmas.jpg"
+	},
+	{
+		"name" : "Calathea Compact Star",
+		"categoryId" :{"$oid":"6375c2287a807c210ea5171f"},
+		"description":"Còn được gọi là Ctenanthe Setosa. Điểm nhấn trên lá chính là chiếc lá xanh có ánh bạc, nhất là khi đặt chậu trong môi trường ánh sáng tán xạ. ",
+		"price" : 220000,
+		"created_at": 1668661654151,
+		"updated_at": 1668661654151,
+		"image": "../../assets/images/Calathea-Compact-Star.jpg"
+	},
+	{
+		"name" : "Đuôi công",
+		"categoryId" :{"$oid":"6375c2287a807c210ea5171f"},
+		"description":"Đuôi công Vittata có các sọc đều bắt mắt, nhưng dải màu trắng tinh tế vì nó gần như được vẽ bằng tay. Giống như hầu hết các thành viên của họ Marantaceae hoặc “Prayer Plant”, Calathea “Vittata” có thói quen đóng mở lá khi chuyển đổi ngày sang đêm. Những chiếc lá là một lời nhắc nhở tuyệt vời về vẻ đẹp của thế giới tự nhiên. ",
+		"price" : 225000,
+		"created_at": 1668661654151,
+		"updated_at": 1668661654151,
+		"image": "../../assets/images/Duoi_Cong.jpg"
+	},
+	{
+		"name" : "Kim ngân",
+		"categoryId" :{"$oid":"6375c2287a807c210ea5171f"},
+		"description":"Sở hữu bộ lá đẹp, mỗi cành chia 5 lá như ngũ hành. Thân của Kim Ngân cũng có nhiều kiểu cách điệu làm thành gốc như Bonsai vừa sang trọng, vừa đẹp.",
+		"price" : 295000,
+		"created_at": 1668661654151,
+		"updated_at": 1668661654151,
+		"image": "../../assets/images/Kim-Ngan.jpg"
+	},
+	{
+		"name" : "Bình An",
+		"categoryId" :{"$oid":"6375c2287a807c210ea5171f"},
+		"description":"Bình an là nét đẹp bình yên dành cho những ai thích màu xanh, sum xuê, cây mọc rũ.",
+		"price" : 115000,
+		"created_at": 1668661654151,
+		"updated_at": 1668661654151,
+		"image": "../../assets/images/Binh-An.jpg"
+	},
+	{
+		"name" : "Peperomia Puteolata",
+		"categoryId" :{"$oid":"6375c2287a807c210ea5171f"},
+		"description":"Peperomia Puteolata là loại cây có lá hình hạt dưa, với những sọc trắng chạy dọc gân lá, và thân cây có màu hơi cam.",
+		"price" : 259000,
+		"created_at": 1668661654151,
+		"updated_at": 1668661654151,
+		"image": "../../assets/images/Peperomia- Puteolata.jpg"
+	},
+	{
+		"name" : "Kim Tiền",
+		"categoryId" :{"$oid":"6375c2287a807c210ea51720"},
+		"description":"Zamioculcas zamiifolia hoặc Cây Kim Tiền là một loài thực vật có hoa trong họ Ráy (Araceae). Loài này được (Lodd.) Engl. miêu tả khoa học đầu tiên năm 1905. Size trưởng thành thích hợp trồng chậu đặt ở góc phòng hay các vị trí muốn tạo thêm điểm nhấn trong không gian.",
+		"price" : 350000,
+		"created_at": 1668661654151,
+		"updated_at": 1668661654151,
+		"image": "../../assets/images/Kim-Tien.jpg"
+	},
+	{
+		"name" : "Đa Tam Phúc",
+		"categoryId" :{"$oid":"6375c2287a807c210ea51720"},
+		"description":"Ficus Triangularis Variegata còn gọi là Si Thái cẩm thạch hay Đa tam phúc. Những tán lá hình trái tim điểm tô bởi những màu sắc xanh vàng bắt mắt. Đây là loại cây trồng ưa sáng, nắng. Nên bạn nên trồng ngoài trời hoặc góc nhà có thật nhiều ánh sáng nhé. Tưới nước khi thấy chất trồng khô đi, tuỳ thuộc nơi bạn đặt chậu. Không để đất khô, hoặc trồng thiếu sáng cây dễ bị rụng lá.",
+		"price" : 499000,
+		"created_at": 1668661654151,
+		"updated_at": 1668661654151,
+		"image": "../../assets/images/Da-Tam-Phuc.jpg"
+	}
+]

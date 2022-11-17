@@ -1,0 +1,26 @@
+.btn-gr {
+    display: flex;
+}
+
+.btn-update {
+    background-color: rgb(50, 153, 250);
+    color: white;
+    width: 5em;
+    height: 2em;
+    margin-right: 1em;
+    font-size: 105%;
+}
+
+.btn-delete {
+    margin-left: 2em;
+    font-size: 105%;
+    background-color: rgb(243, 11, 11);
+    color: white;
+    width: 5em;
+    height: 2em;
+    justify-content: center;
+}
+
+.topnav__search {
+    width: 30%;
+}

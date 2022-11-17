@@ -11,6 +11,7 @@ import React from "react";
 import Table from "../components/table/Table";
 
 const discountTableHead = [
+  "stt",
   "mã vourcher",
   "mô tả",
   "thời gian bắt đầu",
@@ -20,6 +21,7 @@ const discountTableHead = [
   "giảm tối đa",
   "phần trăm giảm",
   "điểm sử dụng",
+  "chức năng",
 ];
 
 const renderHead = (item, index) => <th key={index}>{item}</th>;

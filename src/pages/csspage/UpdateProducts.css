@@ -1,0 +1,23 @@
+.form-update {
+    margin-left: 30em;
+}
+
+
+.btn-cancel {
+    background-color: rgba(121, 125, 128, 0.37);
+    margin-top: 1em;
+    width: 14em;
+    height: 4em;
+    font-size: 1em;
+    float: left;
+}
+
+.btn-save {
+    color: white;
+    margin-top: 1em;
+    background-color: rgb(37, 117, 223);
+    width: 14em;
+    height: 5em;
+    margin-left: 7em;
+    float: right;
+}
