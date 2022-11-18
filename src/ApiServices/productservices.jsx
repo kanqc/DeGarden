@@ -17,18 +17,19 @@ export const get_Products = `
   }
 `;
 
-export const newProducts = `
-  mutation Mutation {
-    createBonsai {
-      data {
-        _id
-        description
+export const new_Products = `
+mutation newProduct($data: CreateBonsaiInput) {
+  createBonsai(data: $data) {
+    data {
+      _id
         image
         name
+        quantity
+        description
         price
-      }
     }
   }
+}
 `;
 // new
 // export const newProducts = async (TenSanPham, MoTa, SoLuong, Gia, HinhAnh) => {

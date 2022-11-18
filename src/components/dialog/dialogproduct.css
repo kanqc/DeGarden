@@ -24,3 +24,40 @@
     font-size: .75rem;
     color: red;
 }
+
+.form-textfield {
+    width: 50%;
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+
+    border: 3px solid rgb(151, 147, 147);
+    transition: 0.5s;
+    outline: none;
+}
+
+input[type=text]:focus {
+    border: 3px solid rgb(36, 35, 35);
+}
+
+.title {
+    width: 30em;
+}
+
+.name-input {
+    float: left;
+    font-size: 1rem;
+    font-weight: 500;
+    color: black;
+
+}
+
+.input-group {
+    margin-left: 4rem;
+    text-align: center;
+    width: 300px;
+    margin-bottom: 1rem;
+}

@@ -1,5 +1,4 @@
-import * as React from "react";
-import { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import "./dialogproduct.css";
 import Button from "@mui/material/Button";
 import Dialog from "@mui/material/Dialog";
@@ -7,11 +6,11 @@ import DialogActions from "@mui/material/DialogActions";
 import DialogContent from "@mui/material/DialogContent";
 import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
+import { useMutation } from "@apollo/client";
 import isEmpty from "validator/lib/isEmpty";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import * as productservices from "../../ApiServices/productservices";
-import { TextField } from "@mui/material";
+import * as Productservices from "../../ApiServices/productservices";
 import { styled } from "@mui/material/styles";
 import axios from "axios";
 // import { TYPE } from "react-toastify/dist/utils";
@@ -22,35 +21,38 @@ const StyledDialog = styled(Dialog)`
   }
 `;
 export default function FormDialogProduct({ open, handleClose }) {
-  const [id, setid] = React.useState("");
-
-  const [image, setImage] = React.useState("");
-  const [nameProduct, setnameProduct] = React.useState("");
-  const [amount, setAmount] = React.useState("");
-  const [price, setPrice] = React.useState("");
-  const [description, setDescription] = React.useState("");
-
-  const data = {
-    id,
-    image,
-    nameProduct,
-    amount,
-    price,
-    description,
-  };
-
-  const handleUpImg = (e) => {
-    setImage(e.target.files[0]);
-  };
-
-  const onSubmit = (e) => {
-    const formData = new FormData();
-    formData.set("file", image, "hello");
-    axios.post("", formData, {
-      headers: {
-        "content-type": "multipart/form-data",
-      },
+  const [inputField, setInputField] = useState({
+    name: "",
+    description: "",
+    quantity: "",
+    price: "",
+  });
+  const inputHandler = (e) => {
+    setInputField({
+      ...inputField,
+      [e.target.name]: e.target.value,
     });
+  };
+
+  // const [createProduct, { error }] = useMutation(Productservices.new_Products);
+
+  // const handleUpImg = (e) => {
+  //   setImage(e.target.files[0]);
+  // };
+
+  // thêm sản phẩm
+  const onSubmit = (e) => {
+    // const formData = new FormData();
+    // formData.set("file", image, "hello");
+    // axios.post("", formData, {
+    //   headers: {
+    //     "content-type": "multipart/form-data",
+    //   },
+    // });
+    // createProduct({
+    //   variables: inputField,
+    // });
+    console.log(inputField);
   };
 
   return (
@@ -61,58 +63,62 @@ export default function FormDialogProduct({ open, handleClose }) {
         aria-labelledby="alert-dialog-title"
         aria-describedby="alert-dialog-description"
       >
-        <DialogTitle id="alert-dialog-title">{"Thêm Sản Phẩm"}</DialogTitle>
-        <DialogContent>
+        <DialogTitle className="title " id="alert-dialog-title">
+          {"Thêm Sản Phẩm"}
+        </DialogTitle>
+        <DialogContent style={{ width: "100%" }}>
           <DialogContentText id="alert-dialog-description">
             <div className="form-textfield">
-              <div className="left-form">
-                <div className="item item-2">
-                  <TextField
+              <form>
+                <div class="input-group mb-3">
+                  <div className="name-input">Tên sản phẩm</div>
+                  <input
                     type="text"
-                    label="Tên Sản Phẩm"
-                    variant="outlined"
-                    margin="dense"
-                    fullWidth
-                    name="nameProduct"
-                    onChange={(e) => setnameProduct(e.target.value)}
-                    required
+                    name="name"
+                    class="form-control"
+                    placeholder="Nhập tên sản phẩm..."
+                    onChange={inputHandler}
+                    value={inputField.name}
                   />
                 </div>
-                <div className="item item-3">
-                  <TextField
-                    label="Mô Tả"
-                    variant="outlined"
-                    margin="dense"
-                    fullWidth
+                <div class="input-group mb-3">
+                  <div className="name-input">Mô tả</div>
+                  <input
+                    type="text"
                     name="description"
-                    onChange={(e) => setDescription(e.target.value)}
-                  />{" "}
+                    class="form-control"
+                    placeholder="Nhập mô tả..."
+                    onChange={inputHandler}
+                    value={inputField.description}
+                  />
                 </div>
-                <div className="item item-4">
-                  <TextField
-                    label="Số Lượng"
-                    variant="outlined"
-                    margin="dense"
-                    fullWidth
-                    name="amount"
-                    onChange={(e) => setAmount(e.target.value)}
-                  />{" "}
+                <div class="input-group mb-3">
+                  <div className="name-input">Số lượng</div>
+                  <input
+                    name="quantity"
+                    type="text"
+                    class="form-control"
+                    placeholder="Nhập số lượng..."
+                    onChange={inputHandler}
+                    value={inputField.quantity}
+                  />
                 </div>
-
-                <div className="item item-5">
-                  <TextField
-                    label="Gía"
-                    variant="outlined"
-                    margin="dense"
-                    fullWidth
+                <div class="input-group mb-3">
+                  <div className="name-input">Gía</div>
+                  <input
+                    type="text"
                     name="price"
-                    onChange={(e) => setPrice(e.target.value)}
-                  />{" "}
+                    class="form-control"
+                    placeholder="Nhập giá..."
+                    onChange={inputHandler}
+                    value={inputField.price}
+                  />
                 </div>
-                <div className="item item-6">
-                  <input fullWidth type="file" onChange={handleUpImg}></input>
+                <div class="input-group mb-3">
+                  <div className="name-input">Hình ảnh</div>
+                  <input type="file" class="form-control" />
                 </div>
-              </div>
+              </form>
             </div>
           </DialogContentText>
         </DialogContent>

@@ -8,6 +8,8 @@ import Grid from "@mui/material/Grid";
 import Button from "@mui/material/Button";
 import * as Productservices from "../ApiServices/productservices";
 
+import img from "../assets/images/user.png";
+
 import "../pages/csspage/Products.css";
 
 const Products = () => {
@@ -59,11 +61,9 @@ const Products = () => {
   const renderBody = (item, index) => (
     <tr key={index}>
       <td>{index + 1}</td>
-      <td style={{ width: "5%" }}>{item._id}</td>
+      <td style={{ width: "5%" }}>{item._id.substring(0, 10) + "....."}</td>
       <td>{item.name}</td>
-      <td style={{ width: "25%", textOverflow: "ellipsis" }}>
-        {item.description}
-      </td>
+      <td>{item.description.substring(0, 30) + "......"}</td>
       <td>{item.price}</td>
       <td>{item.quantity}</td>
       <td>
@@ -73,7 +73,7 @@ const Products = () => {
             height: "25%",
             borderRadius: "13px",
           }}
-          src={item.image}
+          src={img}
         ></image>
       </td>
       <td>
@@ -120,6 +120,7 @@ const Products = () => {
         <input type="text" placeholder="Tìm kiếm sản phẩm" />
         <i className="bx bx-search"></i>
       </div>
+
       <Grid align="right">
         <Button variant="contained" color="primary" onClick={handleClickOpen}>
           +Thêm

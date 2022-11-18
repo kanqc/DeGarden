@@ -28,18 +28,18 @@ function Update({ open, handleClose }) {
     // setFile(localStorage.getItem(""));
   }, []);
 
-  // Thêm sản phẩm
+  // Sửa sản phẩm
   const handleUploadFile = async (e) => {
-    const formData = new FormData();
-    formData.append("avatar", img);
-    await productservices.newProducts(formData);
+    // const formData = new FormData();
+    // formData.append("avatar", img);
+    // await productservices.newProducts(formData);
   };
 
   const handleUpdate = (e) => {
-    setImg(e.target.files[0]);
-    const avatar = e.target.files[0];
-    const review = URL.createObjectURL(avatar);
-    setimgURL(review);
+    // setImg(e.target.files[0]);
+    // const avatar = e.target.files[0];
+    // const review = URL.createObjectURL(avatar);
+    // setimgURL(review);
   };
   return (
     <>

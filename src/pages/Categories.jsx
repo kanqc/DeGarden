@@ -1,13 +1,16 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+
 import { Link } from "react-router-dom";
 import "../pages/csspage/Categories.css";
 import Table from "../components/table/Table";
-import CategorisList from "../assets/Data/categories-list.json";
 import FormDialogCategories from "../components/dialog/dialogcategories";
 import Grid from "@mui/material/Grid";
 import Button from "@mui/material/Button";
+import * as Categoriesservices from "../ApiServices/categoriesservices";
+import axios from "axios";
 
 const Categories = () => {
+  const [data, setData] = useState([]);
   const [open, setOpen] = React.useState(false);
 
   const handleClickOpen = () => {
@@ -17,20 +20,38 @@ const Categories = () => {
   const handleClose = () => {
     setOpen(false);
   };
+  const setToUpdate = () => {};
+  const handleDelete = () => {};
+
+  //Hiển thị danh mục
+  useEffect(() => {
+    const fetchData = async () => {
+      const queryCategories = await axios.post(Categoriesservices.GRAPHQL_API, {
+        query: Categoriesservices.get_Categories,
+      });
+      const result = queryCategories.data.data;
+      setData(result.getAllCategory.data);
+      console.log(data);
+    };
+
+    fetchData();
+  }, []);
+
   const CategoryTableHead = [
     "STT",
     "Mã Danh Mục ",
     "Tên Danh Mục ",
+    // "Mô tả",
     "Chức Năng",
   ];
-  const setToUpdate = () => {};
-  const handleDelete = () => {};
   const renderHead = (item, index) => <th key={index}>{item}</th>;
   const renderBody = (item, index) => (
     <tr key={index}>
       <td>{index + 1}</td>
-      <td>{item.id_category}</td>
-      <td>{item.name_category}</td>
+      <td>{item._id}</td>
+      <td>{item.name}</td>
+      {/* <td>{item.description}</td> */}
+
       <td>
         <div className="btn-gr">
           <Link to="">
@@ -66,7 +87,7 @@ const Categories = () => {
                 limit="5"
                 headData={CategoryTableHead}
                 renderHead={(item, index) => renderHead(item, index)}
-                bodyData={CategorisList}
+                bodyData={data}
                 renderBody={(item, index) => renderBody(item, index)}
               />
             </div>

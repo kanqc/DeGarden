@@ -1,58 +1,15 @@
-import React, { useState, userEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-
+import axios from "axios";
 import "../pages/csspage/Customers.css";
 import Grid from "@mui/material/Grid";
 import Button from "@mui/material/Button";
 import Table from "../components/table/Table";
-import customerList from "../assets/Data/customers-list.json";
-
+import * as Customerservices from "../ApiServices/customerservices";
 import FormDialog from "../components/dialog/dialogcustomer";
-const customerTableHead = [
-  "STT",
-  "Id",
-  "Họ Tên",
-  "Email",
-  "Số điện thoại",
-  "Địa chỉ",
-  "Mật Khẩu",
-  "Giới Tính",
-  "Quyền",
-  "Chức Năng",
-];
-const handleDelete = () => {};
-const setToUpdate = () => {};
-
-const renderHead = (item, index) => <th key={index}>{item}</th>;
-
-const renderBody = (item, index) => (
-  <tr key={index}>
-    <td>{index + 1}</td>
-    <td>{item.id}</td>
-    <td>{item.name}</td>
-    <td>{item.email}</td>
-    <td>{item.phone}</td>
-    <td>{item.total_orders}</td>
-    <td>{item.total_spend}</td>
-    <td>{item.gender}</td>
-    <td>{item.location}</td>
-    <td>
-      <div className="btn-gr">
-        <Link to="/Updatecustomer">
-          <button onClick={() => setToUpdate()} className="btn-update">
-            Sửa{" "}
-          </button>
-        </Link>
-
-        <button onClick={() => handleDelete()} className="btn-delete">
-          Xóa
-        </button>
-      </div>
-    </td>
-  </tr>
-);
 
 const Customers = () => {
+  const [data, setData] = React.useState([]);
   const [open, setOpen] = React.useState(false);
 
   const handleClickOpen = () => {
@@ -62,6 +19,63 @@ const Customers = () => {
   const handleClose = () => {
     setOpen(false);
   };
+  const customerTableHead = [
+    "STT",
+    "Id",
+    "Họ Tên",
+    "Email",
+    "Số điện thoại",
+    "Địa chỉ",
+    "Mật Khẩu",
+    "Giới Tính",
+    "Quyền",
+    "Chức Năng",
+  ];
+  const handleDelete = () => {};
+  const setToUpdate = () => {};
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const queryUser = await axios.post(Customerservices.GRAPHQL_API, {
+        query: Customerservices.get_Users,
+      });
+      const result = queryUser.data.data;
+      setData(result.getAllUsers.data);
+      // console.log(result.getAllBonsai.data);
+    };
+
+    fetchData();
+  }, []);
+
+  const renderHead = (item, index) => <th key={index}>{item}</th>;
+
+  const renderBody = (item, index) => (
+    <tr key={index}>
+      <td>{index + 1}</td>
+      <td>{item._id}</td>
+      <td>{item.name}</td>
+      <td>{item.email}</td>
+      <td>{item.phone}</td>
+      <td>{item.address}</td>
+      <td>{item.password.substring(0, 8) + "...."}</td>
+      <td>{item.gender}</td>
+      <td>{item.role}</td>
+
+      <td>
+        <div className="btn-gr">
+          <Link to="/Updatecustomer">
+            <button onClick={() => setToUpdate()} className="btn-update">
+              Sửa{" "}
+            </button>
+          </Link>
+
+          <button onClick={() => handleDelete()} className="btn-delete">
+            Xóa
+          </button>
+        </div>
+      </td>
+    </tr>
+  );
   return (
     <div>
       <h2 className="page-header">Người Dùng</h2>
@@ -82,7 +96,7 @@ const Customers = () => {
                 limit="5"
                 headData={customerTableHead}
                 renderHead={(item, index) => renderHead(item, index)}
-                bodyData={customerList}
+                bodyData={data}
                 renderBody={(item, index) => renderBody(item, index)}
               />
             </div>
