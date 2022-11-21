@@ -1,0 +1,68 @@
+:root{
+    --flex-item:100%;
+}
+
+.footer{
+    background-color: rgb(50, 50, 50);
+}
+.footer-container{
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 210px 200px 210px;
+    color: white;
+}
+.footer-item{
+    width: 25%;
+    font-size: 15px;
+}
+.mid{
+    width: 40%;
+    margin: 0 5%;
+}
+.footer-item hr{
+    background-color: white;
+    margin-bottom: 20px;
+}
+.footer-item p{
+    text-align: justify;
+}
+.footer-item h3{
+    padding-bottom: 40px;
+}
+.social-media{
+    display: flex;
+    flex-direction: column;
+}
+.facebook{
+    margin-bottom: 10px;
+}
+.fa-facebook-square{
+    font-size: 18px;
+    margin-right: 5px;
+}
+.fa-instagram{
+    font-size: 18px;
+    margin-right: 5px;
+}
+.info{
+    display: flex;
+    flex-direction: column;
+}
+.address{
+    margin-bottom: 10px;
+}
+.fa-map-marker{
+    font-size: 18px;
+    margin-right: 5px;
+}
+.phone{
+    margin-bottom: 10px;
+}
+.fa-phone{
+    font-size: 18px;
+    margin-right: 5px;
+}
+.fa-envelope{
+    font-size: 18px;
+    margin-right: 5px;  
+}

@@ -1,0 +1,26 @@
+:root {
+  --degarden-color: #e8677b;
+}
+.pagination-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+.pagination-container a {
+  background-color: #f7f5f5;
+  font-weight: 600;
+  margin: 0 5px;
+  padding: 5px 10px;
+  transition: all 0.5s;
+}
+.pagination-container a:hover {
+  cursor: pointer;
+  background-color: var(--degarden-color);
+  color: whitesmoke;
+}
+.active a {
+  background-color: var(--degarden-color);
+  color: whitesmoke;
+}

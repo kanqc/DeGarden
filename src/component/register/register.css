@@ -1,0 +1,94 @@
+fieldset {
+  border: 1px solid black;
+  width: 35%;
+  margin: 2em auto;
+  font-size: 20px;
+}
+fieldset p {
+  font-size: 35px;
+  text-align: center;
+  padding-top: 1.5em;
+}
+legend {
+  width: auto;
+  text-align: center;
+  font-size: 1rem;
+  padding: 0 1rem;
+}
+.fa-user-circle {
+  font-size: 40px;
+}
+input#name {
+  display: block;
+  margin: 1rem auto 1rem auto;
+  padding: 0.5rem 12rem 0.5rem 1rem;
+  border: 1px solid lightgray;
+  border-radius: 3px;
+}
+#pnumber {
+  display: block;
+  margin: 1rem auto 1rem auto;
+  padding: 0.5rem 12rem 0.5rem 1rem;
+  border: 1px solid lightgray;
+  border-radius: 3px;
+}
+#address {
+  display: block;
+  margin: 1rem auto 1rem auto;
+  padding: 0.5rem 12rem 0.5rem 1rem;
+  border: 1px solid lightgray;
+  border-radius: 3px;
+}
+#uname {
+  display: block;
+  margin: 1rem auto 1rem auto;
+  padding: 0.5rem 12rem 0.5rem 1rem;
+  border: 1px solid lightgray;
+  border-radius: 3px;
+}
+#pass {
+  display: block;
+  margin: 0 auto 1rem auto;
+  padding: 0.5rem 12rem 0.5rem 1rem;
+  border: 1px solid lightgray;
+  border-radius: 3px;
+}
+#gender {
+  display: block;
+  font-size: 15px;
+  margin: 0 auto 1rem auto;
+  width: 370px;
+  border: 1px solid lightgray;
+  padding: 10px 0;
+  border-radius: 3px;
+  text-align: center;
+}
+
+.btn-log {
+  display: block;
+  margin: auto;
+  padding: 0.5rem 7.5rem;
+  margin-bottom: 5rem;
+  font-weight: bold;
+  background-color: #00e673;
+  border: none;
+  border-radius: 3px;
+}
+.btn-reg {
+  display: block;
+  margin: auto;
+  padding: 0.6rem 9.5rem;
+  margin-bottom: 5rem;
+  font-weight: bold;
+  background-color: #ff8080;
+  border: none;
+  border-radius: 3px;
+}
+fieldset .reg {
+  font-size: 15px;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+fieldset label {
+  margin-left: 5rem;
+}

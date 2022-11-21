@@ -1,0 +1,19 @@
+.central-container{
+    padding-left: 300px;
+    padding-right: 300px;
+}
+.central-text{
+    font-size: 50px;
+    color: rgb(147, 147, 147);
+    position: relative;
+    text-align: center;
+    width: 80%;
+    line-height: 1px;
+    border-bottom: 1px solid #000;
+    margin: 50px auto 50px;
+}
+.central-text span{
+    background-color: white;
+    font-family: Pacifico;
+    padding: 5px 20px;
+}

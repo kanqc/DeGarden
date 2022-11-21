@@ -1,0 +1,70 @@
+:root {
+  --degarden-color: #e8677b;
+}
+.btn {
+  font-size: 18px;
+  border: 1px solid lightgray;
+  padding: 5px;
+  font-weight: 600;
+}
+.btn--addToCart--card {
+  display: block;
+  font-size: 16px;
+  padding: 8px 30px;
+  background-color: white;
+  margin: auto;
+  background: linear-gradient(var(--degarden-color) 0 0) left / 100%
+    var(--d, 0%) no-repeat;
+  transition: 0.3s;
+}
+.btn--addToCart--card:hover {
+  font-size: 16px;
+  border: 1px solid white;
+  cursor: pointer;
+  --d: 100%;
+  color: #fff;
+}
+.btn--default {
+  background-color: white;
+}
+.btn--payment {
+  width: 280px;
+  font-size: 18px;
+  color: #fff;
+  font-weight: 900;
+  padding: 10px 20px;
+  float: right;
+  background: linear-gradient(white 0 0) left / 100% var(--d, 0%) no-repeat;
+  transition: 0.3s;
+  background-color: var(--degarden-color);
+}
+.btn--payment:hover {
+  border: 1px solid rgb(224, 224, 224);
+  cursor: pointer;
+  --d: 100%;
+  color: black;
+}
+.btn--continute--shopping {
+  width: 180px;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 10px 20px;
+}
+.btn--continute--shopping:hover {
+  cursor: pointer;
+}
+.btn--addToCart--detail {
+  display: block;
+  padding: 10px 30px;
+  color: white;
+  background: linear-gradient(white 0 0) left / 100% var(--d, 0%) no-repeat;
+  transition: 0.3s;
+  background-color: var(--degarden-color);
+}
+.btn--addToCart--detail:hover {
+  font-size: 18px;
+  border: 1px solid gray;
+  cursor: pointer;
+  --d: 100%;
+  color: black;
+}

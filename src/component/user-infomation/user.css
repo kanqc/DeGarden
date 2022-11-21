@@ -1,0 +1,98 @@
+.form-user {
+    border: 0.2px solid rgb(211, 208, 208);
+    box-shadow: 5px 5px 5px 5px rgb(204, 204, 204);
+    width: 50%;
+    height: 40em;
+    margin: auto;
+    background-color: rgb(245, 245, 245);
+}
+
+.user-img>img {
+    border-radius: 50%;
+    text-align: center;
+    width: 10em;
+    height: 10em;
+}
+
+.user-img {
+    display: flex;
+    justify-content: center;
+}
+
+.name-user {
+    margin-top: 1em;
+    display: flex;
+    justify-content: center;
+}
+
+.name {
+    color: rgb(236, 133, 7);
+    font-size: 2em;
+    font-weight: 500;
+}
+
+.input-left-top {
+    margin-left: 3em;
+    display: block;
+    width: 20em;
+}
+
+.input-left-mid {
+    margin-top: 2em;
+    margin-left: 3em;
+    display: block;
+    width: 20em;
+
+
+}
+
+.input-left-bottom {
+    width: 20em;
+    margin-left: 3em;
+    display: block;
+    margin-top: 2em;
+
+}
+
+.input-img {
+    float: right;
+    margin-right: 3em;
+}
+
+.input-right-top {
+    float: right;
+    width: 20em;
+    margin-top: 3em;
+    margin-right: 30px;
+    display: block;
+}
+
+.input-right-bottom {
+    width: 20em;
+    margin-right: 30px;
+    display: block;
+    float: right;
+    margin-top: 2em;
+}
+
+.btn-group {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    margin: auto;
+    margin-top: 8em;
+}
+
+.btn-return>button {
+    width: 16em;
+    height: 4em;
+}
+
+.btn-change {
+    margin-left: 3em;
+}
+
+.btn-change>button {
+    float: right;
+    width: 16em;
+    height: 4em;
+}
