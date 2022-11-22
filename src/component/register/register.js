@@ -46,6 +46,7 @@ export default function Register() {
                 variables:
               {
                 "user": {
+                  "address": user.address,
                   "avatar": `${removeVietnameseTones(user.name)}.jpg`,
                   "email": user.email,
                   "gender": user.gender,

@@ -37,6 +37,7 @@ export default function Otpmail() {
     };
     data();
 },[]);
+console.log(data);
   useEffect(() => {
     const data = async() =>{
         const queryRes = await axios.post(
@@ -58,12 +59,12 @@ export default function Otpmail() {
   
   const submitHandler = e =>{
     e.preventDefault();
-  window.localStorage.removeItem('MY-USER-REGISTER-DETAIL')
   if(!codeMessage.status){
     let tmp = codeMessage.message.split(":")
      setError(tmp[1])
      console.log(error)
     }else{
+      window.localStorage.removeItem('MY-USER-REGISTER-DETAIL')
       navigate('/dang-nhap')
     }
   }
