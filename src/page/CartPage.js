@@ -1,5 +1,5 @@
 import React from 'react';
-import Navbar from '../component/navbar/navbar';
+import Navbar from '../component/navbar/Navbar';
 import Cart from '../component/cart/Cart';
 
 
