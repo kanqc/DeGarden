@@ -67,14 +67,14 @@ const Products = () => {
       <td>{item.price}</td>
       <td>{item.quantity}</td>
       <td>
-        <image
+        <img
           style={{
-            width: "55%",
-            height: "25%",
+            width: "8rem",
+            height: "5rem",
             borderRadius: "13px",
           }}
-          src={img}
-        ></image>
+          src={item.image}
+        ></img>
       </td>
       <td>
         <div className="btn-gr">
