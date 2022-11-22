@@ -72,6 +72,7 @@ export default function Otpmail() {
       <fieldset>
       <legend><i class="fa fa-file-text" aria-hidden="true"></i></legend>
           <p>NHẬP MÃ OTP</p>
+          <p className="error">{!codeMessage.status ? `${error}` : ""}</p>
           <input type="text" id="otp" name="otp" placeholder="Mời bạn nhập mã" onChange={onChange}></input>
           <input type="submit" value="XÁC NHẬN" class="btn-access" ></input>   
         </fieldset>

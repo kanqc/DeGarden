@@ -7,7 +7,6 @@ const productContext = createContext();
 function ProductProvider({children}){
     const [products, setProducts] = useState([]);
     
-    
     useEffect(() => {
         const data = async() =>{
             const queryRes = await axios.post(

@@ -30,6 +30,15 @@ function Navbar(){
         return str;
     }
     const [fix, setFix] = useState(false);
+    let login = false;
+    let userData = useState({});
+    const [accessToken, setAccessToken] = useState("");
+
+    if(window.localStorage.getItem('LOGIN')){
+        login = true;
+        let receiveFromLocal = window.localStorage.getItem('USER_LOGIN_DATA');
+        userData = JSON.parse(receiveFromLocal);
+    }
     const stickyNavbar = () =>{
         if(window.scrollY >= 100){
             setFix(true);
@@ -43,6 +52,12 @@ function Navbar(){
         setclick(!click);
     }
     const [categories, setCategories] = useContext(CategoryContext);
+    const logout = (e) => {
+        window.localStorage.removeItem('USER_LOGIN_DATA');
+        window.localStorage.removeItem('USER_ACCESS_TOKEN');
+        window.localStorage.removeItem('LOGIN')
+        window.location.reload(false)
+    }
     // console.log(categories)
         return(
             <div>
@@ -70,7 +85,9 @@ function Navbar(){
                 </div>
                 <div className='right-navbar'>
                     <div className='user-menu'>
-                            TÀI KHOẢN<i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                            {!login ? "TÀI KHOẢN" : `${userData.name}`}
+                            <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                            {!login ?  
                             <div className='user-list'>
                                 <Link to={'/dang-nhap'} style={{textDecoration: "none"}}>
                                     <li className='user-item'>Đăng nhập</li>
@@ -78,7 +95,14 @@ function Navbar(){
                                 <Link to={'/dang-ky'} style={{textDecoration: "none"}}>
                                     <li className='user-item'>Đăng ký</li>
                                 </Link>
-                            </div>
+                            </div> 
+                            : <div className='user-list'>
+                            <Link to={'/'} style={{textDecoration: "none"}}>
+                                <li className='user-item'>Thông tin tài khoản</li>
+                            </Link>
+                                <li className='user-item' onClick={logout}>Đăng xuất</li>
+                        </div> }
+                           
                     </div>
                     <div className='cart-navbar'> 
                         <Link to="/cart" className='cart-navbar'><i class="fa fa-shopping-cart" aria-hidden="true"></i></Link>

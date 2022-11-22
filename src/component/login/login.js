@@ -1,14 +1,19 @@
 import React, { useState , useEffect} from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./login-form.css";
 import * as Constant from '../../constants';
 import axios from "axios";
 
 export default function Login() {
+  // window.localStorage.removeItem('USER_LOGIN_DATA');
+  // window.localStorage.removeItem('USER_ACCESS_TOKEN');
+  // window.localStorage.removeItem('LOGIN')
   const [account, setAccount] = useState({username :"", pass:""});
   const [userDetail, setUserDetail] = useState({});
   const [message, setMessage] = useState({});
-  const [error, setError] = useState("")
+  const [error, setError] = useState(" ")
+
+  const navigate = useNavigate();
   const onChange = (e) =>{
     setAccount({...account , [e.target.name] : e.target.value});
 
@@ -36,6 +41,18 @@ export default function Login() {
     e.preventDefault();
     console.log(message)
     console.log(userDetail)
+     if(!message.status){
+    let tmp = message.message.split(":")
+     setError(tmp[1])
+     console.log(error)
+    }else{
+      let accessToken = message.access_token.split(" ")[1];
+      window.localStorage.setItem('USER_LOGIN_DATA',JSON.stringify(userDetail));
+      window.localStorage.setItem('USER_ACCESS_TOKEN',JSON.stringify(accessToken));
+      window.localStorage.setItem('LOGIN',true)
+      window.location.href="/";
+    }
+    
   }
   return(
     <form onSubmit={sumbitHandler} >

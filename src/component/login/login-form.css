@@ -36,20 +36,10 @@ legend {
 .btn-log {
   display: block;
   margin: auto;
-  padding: 0.5rem 7.5rem;
+  padding: 0.7rem 7rem;
   margin-bottom: 5rem;
   font-weight: bold;
   background-color: #00e673;
-  border: none;
-  border-radius: 3px;
-}
-.btn-reg {
-  display: block;
-  margin: auto;
-  padding: 0.5rem 9.3rem;
-  margin-bottom: 5rem;
-  font-weight: bold;
-  background-color: #ff8080;
   border: none;
   border-radius: 3px;
 }

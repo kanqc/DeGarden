@@ -13,7 +13,6 @@ import { productContext } from '../Context/ProductContext';
 
 function Home(){
     const [products, setProducts] = useContext(productContext);
-   
     const newProducts = products.slice(-4);
     return(
         <div>   
