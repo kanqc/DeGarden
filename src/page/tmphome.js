@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 import {Routes, Route, Link} from 'react-router-dom';
-import Navbar from '../component/navbar/Navbar';
+import Navbar from '../component/navbar/navbar';
 import Footer from '../component/footer/Footer';
 import Product from '../component/product/Product';
 import Banner from '../component/banner/Banner';
