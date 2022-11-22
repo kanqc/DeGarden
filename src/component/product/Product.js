@@ -46,7 +46,7 @@ function Product({cateProduct}){
                         
                     }
                         <Link to={`/product/${removeVietnameseTones(product.name)}`}>
-                        <img src={require(`${product.image}`)} alt='temp-pic'></img>
+                        <img src={product.image} alt='temp-pic'></img>
                         <i class="fa fa-search product-info" aria-hidden="true"></i>
                         </Link>
                         <div className='product-item-content'>

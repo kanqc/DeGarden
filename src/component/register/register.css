@@ -18,38 +18,41 @@ legend {
 .fa-user-circle {
   font-size: 40px;
 }
-input#name {
+#name {
   display: block;
   margin: 1rem auto 1rem auto;
-  padding: 0.5rem 12rem 0.5rem 1rem;
+  padding: 1em 0.5em;
+  width: 370px;
   border: 1px solid lightgray;
   border-radius: 3px;
 }
 #pnumber {
   display: block;
+  padding: 1em 0.5em;
   margin: 1rem auto 1rem auto;
-  padding: 0.5rem 12rem 0.5rem 1rem;
+  width: 370px;
   border: 1px solid lightgray;
   border-radius: 3px;
 }
 #address {
   display: block;
   margin: 1rem auto 1rem auto;
-  padding: 0.5rem 12rem 0.5rem 1rem;
+  padding: 1em 0.5em;
+  width: 370px;
   border: 1px solid lightgray;
   border-radius: 3px;
 }
 #uname {
   display: block;
   margin: 1rem auto 1rem auto;
-  padding: 0.5rem 12rem 0.5rem 1rem;
+  width: 370px;
   border: 1px solid lightgray;
   border-radius: 3px;
 }
 #pass {
   display: block;
   margin: 0 auto 1rem auto;
-  padding: 0.5rem 12rem 0.5rem 1rem;
+  width: 370px;
   border: 1px solid lightgray;
   border-radius: 3px;
 }
@@ -91,4 +94,8 @@ fieldset .reg {
 }
 fieldset label {
   margin-left: 5rem;
+}
+.error {
+  font-size: 17px;
+  color: red;
 }

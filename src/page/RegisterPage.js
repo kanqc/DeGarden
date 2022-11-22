@@ -4,6 +4,7 @@ import otpmail from '../component/otpmail/otpmail';
 import Footer from '../component/footer/Footer';
 
 function RegisterPage(){
+    
     return(
         <div>
             <Register></Register>

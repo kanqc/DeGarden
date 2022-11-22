@@ -44,7 +44,7 @@ function ProductDetail({productDetail}) {
         <div>
             <div className='product-detail-container'>
                 <div className='product-detail-left'>
-                    <img src={require(`../../assets/image/${removeVietnameseTones(product.name)}.jpg`)} alt="aaaa" className='product-detail-img'></img>
+                    <img src={product.image} alt="aaaa" className='product-detail-img'></img>
                 </div>
                 <div className='product-detail-right'>
                     <p className='product-detail-name'>{product.name}</p>

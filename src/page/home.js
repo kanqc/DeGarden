@@ -6,7 +6,7 @@ import Product from '../component/product/Product';
 import Banner from '../component/banner/Banner';
 import Central from '../component/central/Central';
 import Button from '../component/button/Button';
-import bannerPic from '../assets/images/banner.png';
+import bannerPic from '../assets/images/banner.png'
 import subBannerPic from '../assets/images/sub-banner.png'
 import CartPage from './CartPage';
 import { productContext } from '../Context/ProductContext';

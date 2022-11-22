@@ -28,7 +28,7 @@ function App() {
                   <Route path='/product/:productName' element={<ProductDetailPage/>}/>
                   <Route path='/dang-nhap' element={<LoginPage/>}/>
                   <Route path='/dang-ky' element={<RegisterPage/>}/>
-                  <Route path='/get-otp' element={<OtpPage/>}/>
+                  <Route path='/nhap-otp' element={<OtpPage/>}/>
           </Routes>
           <ScrollToTop/>
       </CategoryProvider>
