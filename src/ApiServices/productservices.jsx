@@ -19,9 +19,25 @@ export const get_Products = `
 
 export const new_Products = `
 mutation newProduct($data: CreateBonsaiInput) {
-  createBonsai(data: $data) {
+  createBonsai (data: $data){
+    status
+    mesage
     data {
       _id
+      name
+      description
+      quantity
+      price
+     image
+    }
+  }
+}
+`;
+export const delete_Products = `
+mutation newProduct($data: CreateBonsaiInput) {
+  createBonsai(data: $data) {
+    data {
+         _id
         image
         name
         quantity

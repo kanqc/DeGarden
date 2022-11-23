@@ -15,6 +15,7 @@ import "../pages/csspage/Products.css";
 const Products = () => {
   const [data, setData] = useState([]);
   const [open, setOpen] = React.useState(false);
+  const [nameSearch, setNameSearch] = useState("");
 
   const handleClickOpen = () => {
     setOpen(true);
@@ -22,6 +23,11 @@ const Products = () => {
 
   const handleClose = () => {
     setOpen(false);
+  };
+  // Search sản phẩm
+  const handleSearch = (e) => {
+    setNameSearch(e.target.value);
+    console.log(nameSearch);
   };
   //Hiển thị sản phẩm
   useEffect(() => {
@@ -31,20 +37,28 @@ const Products = () => {
       });
       const result = queryProduct.data.data;
       setData(result.getAllBonsai.data);
-      // console.log(result.getAllBonsai.data);
+      // console.log("data", result.getAllBonsai.data);
     };
 
     fetchData();
   }, []);
+  // Xóa sản phẩm
+
+  // const handleDelete = async () => {
+  //   const DeleteProduct = await axios.post(Productservices.GRAPHQL_API, {
+  //     query: Productservices.delete_Products,
+  //   });
+  //   const result = DeleteProduct.data._id;
+  //   setData(result.getAllBonsai.data);
+  //   console(data);
+  // };
 
   //đưa các thuộc tính từ trang products qua trang sửa(updateproduct)
-  const setToUpdate = (id, TenSanPham, MoTa, SoLuong, Gia, Hinhanh) => {
-    localStorage.setItem("id", id);
-    localStorage.setItem("TenSanPham", TenSanPham);
-    localStorage.setItem("MoTa", MoTa);
-    localStorage.setItem("SoLuong", SoLuong);
-    localStorage.setItem("Gia", Gia);
-    localStorage.setItem("Hinhanh", Hinhanh);
+  const setToUpdate = (index) => {
+    // console.log("updte", data[index]);
+    localStorage.setItem("detailProduct", JSON.stringify(data[index]));
+
+    // localStorage.setItem("id", "hello");
   };
   const ProductsTableHead = [
     "STT",
@@ -67,14 +81,14 @@ const Products = () => {
       <td>{item.price}</td>
       <td>{item.quantity}</td>
       <td>
-        <image
+        <img
           style={{
-            width: "55%",
-            height: "25%",
+            width: "8em",
+            height: "5em",
             borderRadius: "13px",
           }}
-          src={img}
-        ></image>
+          src={item.image}
+        ></img>
       </td>
       <td>
         <div className="btn-gr">
@@ -83,14 +97,8 @@ const Products = () => {
               className="btn-update"
               onClick={() => {
                 // if (window.confirm("Update the item?")) {
-                setToUpdate(
-                  item["id"],
-                  item["TenSanPham"],
-                  item["MoTa"],
-                  item["SoLuong"],
-                  item["Gia"],
-                  item["Hinhanh"]
-                );
+                setToUpdate(index);
+
                 // }
               }}
             >
@@ -102,7 +110,8 @@ const Products = () => {
             className="btn-delete"
             onClick={() => {
               if (window.confirm("Delete the item?")) {
-                // handleDelete(item["id"]);
+                // handleDeltete();
+                //  handleDelete(item["id"]);
               }
             }}
           >
@@ -117,7 +126,11 @@ const Products = () => {
       <h2 className="page-header"> Sản Phẩm</h2>
 
       <div className="topnav__search">
-        <input type="text" placeholder="Tìm kiếm sản phẩm" />
+        <input
+          type="text"
+          placeholder="Tìm kiếm sản phẩm"
+          onChange={handleSearch}
+        />
         <i className="bx bx-search"></i>
       </div>
 

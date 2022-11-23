@@ -21,38 +21,46 @@ const StyledDialog = styled(Dialog)`
   }
 `;
 export default function FormDialogProduct({ open, handleClose }) {
-  const [inputField, setInputField] = useState({
+  const [message, setMessage] = useState("NULL");
+  const [productDetail, setProductDetail] = useState({});
+  const [product, setProduct] = useState({
     name: "",
     description: "",
+    image: "",
     quantity: "",
     price: "",
   });
-  const inputHandler = (e) => {
-    setInputField({
-      ...inputField,
-      [e.target.name]: e.target.value,
-    });
+  const onChange = (e) => {
+    setProduct({ ...product, [e.target.name]: e.target.value });
   };
-
-  // const [createProduct, { error }] = useMutation(Productservices.new_Products);
-
   // const handleUpImg = (e) => {
   //   setImage(e.target.files[0]);
   // };
 
   // thêm sản phẩm
-  const onSubmit = (e) => {
-    // const formData = new FormData();
-    // formData.set("file", image, "hello");
-    // axios.post("", formData, {
-    //   headers: {
-    //     "content-type": "multipart/form-data",
-    //   },
-    // });
-    // createProduct({
-    //   variables: inputField,
-    // });
-    console.log(inputField);
+  useEffect(() => {
+    const data = async () => {
+      const queryRes = await axios.post(Productservices.GRAPHQL_API, {
+        query: Productservices.new_Products,
+        variables: {
+          data: {
+            name: product.name,
+            description: product.description,
+            image: product.image,
+            quantity: product.quantity,
+            price: product.price,
+          },
+        },
+      });
+      const res = queryRes.data.data;
+      setMessage(res);
+      setProduct(res.data);
+    };
+    data();
+  }, [product]);
+
+  const sumbitHandler = (e) => {
+    console.log("nhấn chọn nè", product);
   };
 
   return (
@@ -69,7 +77,7 @@ export default function FormDialogProduct({ open, handleClose }) {
         <DialogContent style={{ width: "100%" }}>
           <DialogContentText id="alert-dialog-description">
             <div className="form-textfield">
-              <form>
+              <form onSubmit={sumbitHandler}>
                 <div class="input-group mb-3">
                   <div className="name-input">Tên sản phẩm</div>
                   <input
@@ -77,8 +85,8 @@ export default function FormDialogProduct({ open, handleClose }) {
                     name="name"
                     class="form-control"
                     placeholder="Nhập tên sản phẩm..."
-                    onChange={inputHandler}
-                    value={inputField.name}
+                    onChange={onChange}
+                    value={product.name}
                   />
                 </div>
                 <div class="input-group mb-3">
@@ -88,8 +96,8 @@ export default function FormDialogProduct({ open, handleClose }) {
                     name="description"
                     class="form-control"
                     placeholder="Nhập mô tả..."
-                    onChange={inputHandler}
-                    value={inputField.description}
+                    onChange={onChange}
+                    value={product.description}
                   />
                 </div>
                 <div class="input-group mb-3">
@@ -99,44 +107,54 @@ export default function FormDialogProduct({ open, handleClose }) {
                     type="text"
                     class="form-control"
                     placeholder="Nhập số lượng..."
-                    onChange={inputHandler}
-                    value={inputField.quantity}
+                    onChange={onChange}
+                    value={product.quantity}
                   />
                 </div>
                 <div class="input-group mb-3">
-                  <div className="name-input">Gía</div>
+                  <div className="name-input">Giá</div>
                   <input
                     type="text"
                     name="price"
                     class="form-control"
                     placeholder="Nhập giá..."
-                    onChange={inputHandler}
-                    value={inputField.price}
+                    onChange={onChange}
+                    value={product.price}
                   />
                 </div>
                 <div class="input-group mb-3">
                   <div className="name-input">Hình ảnh</div>
-                  <input type="file" class="form-control" />
+                  <input
+                    name="image"
+                    type="file"
+                    class="form-control"
+                    // onChange={onChange}
+                    // value={product.image}
+                  />
+                </div>
+                <div className="btn-group">
+                  <DialogActions>
+                    <button className="btn-cancel" onClick={handleClose}>
+                      Hủy Bỏ
+                    </button>
+                    <button
+                      className="btn-save"
+                      type="submit"
+                      onClick={() => {
+                        sumbitHandler();
+                      }}
+                      variant="contained"
+                      color="primary"
+                      autoFocus
+                    >
+                      Lưu
+                    </button>
+                  </DialogActions>
                 </div>
               </form>
             </div>
           </DialogContentText>
         </DialogContent>
-        <DialogActions>
-          <Button onClick={handleClose}>Hủy Bỏ</Button>
-          <Button
-            type="submit"
-            onClick={() => {
-              onSubmit();
-              //   onSubmitValidtion();
-            }}
-            variant="contained"
-            color="primary"
-            autoFocus
-          >
-            Lưu
-          </Button>
-        </DialogActions>
       </StyledDialog>
     </div>
   );

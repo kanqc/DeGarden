@@ -13,26 +13,30 @@ function Update({ open, handleClose }) {
   const [product, setproduct] = useState();
   const [id, setid] = useState(0);
   const [nameProduct, setnameProduct] = React.useState("");
-  const [img, setImg] = useState([]);
-  const [amount, setAmount] = React.useState("");
+  const [image, setImage] = useState([]);
+  const [quantity, setQuantity] = React.useState("");
   const [price, setPrice] = React.useState("");
   const [description, setDescription] = React.useState("");
 
+  console.log(image);
+
   // lấy từ các key trong localstorage
   useEffect(() => {
-    setid(localStorage.getItem(""));
-    setnameProduct(localStorage.getItem(""));
-    setAmount(localStorage.getItem(""));
-    setPrice(localStorage.getItem(""));
-    setDescription(localStorage.getItem(""));
+    const detailProduct = JSON.parse(localStorage.getItem("detailProduct"));
+    //console.log("get product", detailProduct);
+    setid(detailProduct._id);
+    setnameProduct(detailProduct.name);
+    setDescription(detailProduct.description);
+    setQuantity(detailProduct.quantity);
+    setPrice(detailProduct.price);
+    setImage(detailProduct.image);
+
     // setFile(localStorage.getItem(""));
   }, []);
 
   // Sửa sản phẩm
   const handleUploadFile = async (e) => {
-    // const formData = new FormData();
-    // formData.append("avatar", img);
-    // await productservices.newProducts(formData);
+    setImage(e.target.value);
   };
 
   const handleUpdate = (e) => {
@@ -86,8 +90,8 @@ function Update({ open, handleClose }) {
               margin="dense"
               fullWidth
               name="amount"
-              value={amount}
-              onChange={(e) => setAmount(e.target.value)}
+              value={quantity}
+              onChange={(e) => setQuantity(e.target.value)}
             />{" "}
           </div>
           <div className="item item-5">
@@ -102,13 +106,32 @@ function Update({ open, handleClose }) {
             />{" "}
           </div>
           <div className="item item-6">
-            <img
+            <div
+              style={{
+                width: "550px",
+                height: "450px",
+              }}
+            >
+              <img
+                style={{
+                  width: "100%",
+                  height: "100%",
+                }}
+                src={image}
+                alt="img"
+              />
+            </div>
+            <input
               // src={}
               fullWidth
               type="file"
               id="image"
               accept=".png, .jpg, .jpeg"
-              onChange={handleUploadFile}
+              onChange={(e) =>
+                // console.log("change");
+                // console.log(e.target.value);
+                handleUploadFile()
+              }
             />{" "}
           </div>
 

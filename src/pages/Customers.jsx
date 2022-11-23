@@ -42,8 +42,14 @@ const Customers = () => {
       const result = queryUser.data.data;
       setData(result.getAllUsers.data);
       // console.log(result.getAllBonsai.data);
+      // console.log(result);
     };
-
+    // console.log(data);
+    // {
+    //   headers:{
+    //     'Content-Type': 'application/json'
+    //   }
+    // }
     fetchData();
   }, []);
 

@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import "./table.css";
 
 const Table = (props) => {
-  console.log("bodydata", props.bodyData);
+  // console.log("bodydata", props.bodyData);
   const initDataShow =
     props.limit && props.bodyData
       ? props.bodyData.slice(0, Number(props.limit))
@@ -20,7 +20,7 @@ const Table = (props) => {
 
   useEffect(() => {
     setDataShow(initDataShow);
-    console.log("setData");
+    // console.log("setData");
   }, [props.bodyData]);
 
   const [currPage, setCurrPage] = useState(0);
