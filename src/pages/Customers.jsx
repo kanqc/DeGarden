@@ -26,7 +26,6 @@ const Customers = () => {
     "Email",
     "Số điện thoại",
     "Địa chỉ",
-    "Mật Khẩu",
     "Giới Tính",
     "Quyền",
     "Chức Năng",
@@ -45,11 +44,11 @@ const Customers = () => {
           headers: {
             "Content-Type": "application/json",
             Authorization:
-              "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzM1NWE3NzJhYWYwMzM2MDVlYzNlOWEiLCJyb2xlIjoiQURNSU5fUk9MRSIsImlhdCI6MTY2OTEzOTMwMSwiZXhwIjoxNjcxNzMxMzAxfQ.m21ryLMqGkmPemWjs_m-r8K67OpN7ga5in49W-j-CYU",
+              "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzM1NWE3NzJhYWYwMzM2MDVlYzNlOWEiLCJyb2xlIjoiQURNSU5fUk9MRSIsImlhdCI6MTY2OTE4NjEzMSwiZXhwIjoxNjcxNzc4MTMxfQ.yI1SnCoE8zn-BveLDKv2xlM9eQ54OcP_dKiL2Gq2wjI",
           },
         }
       );
-
+      console.log(queryUser);
       const result = queryUser.data.data;
       setData(result.getAllUsers.data);
     };
@@ -72,12 +71,14 @@ const Customers = () => {
       <td>{item.email}</td>
       <td>{item.phone}</td>
       <td>{item.address}</td>
-      <td>{item.password.substring(0, 8) + "...."}</td>
+      {/* <td>{item.password.substring(0, 8) + "...."}</td> */}
       <td>{item.gender}</td>
       <td>{item.role}</td>
-
       <td>
-        <div className="btn-gr">
+        <div
+          className="btn-gr"
+          style={{ display: item.role === "ADMIN_ROLE" ? "none" : "" }}
+        >
           <Link to="/Updatecustomer">
             <button onClick={() => setToUpdate()} className="btn-update">
               Sửa{" "}
