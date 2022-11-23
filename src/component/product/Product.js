@@ -5,8 +5,7 @@ import Button from '../button/Button';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import * as Constant from '../../constants';
-import { productContext } from '../../Context/ProductContext';
-import { CategoryContext } from '../../Context/CategoryContext';
+import { CartContext } from '../../Context/CartContext';
 function Product({cateProduct}){
     function removeVietnameseTones(str) {
         str = str.replace(/à|á|ạ|ả|ã|â|ầ|ấ|ậ|ẩ|ẫ|ă|ằ|ắ|ặ|ẳ|ẵ/g,"a"); 
@@ -33,7 +32,7 @@ function Product({cateProduct}){
         return str;
     }
     const [products, setProducts] = [cateProduct];
-    
+    const cart = useContext(CartContext);
 
     //  console.log(products);
     let imageName = '';
@@ -42,9 +41,7 @@ function Product({cateProduct}){
             <div className='product-list'>
                 {
                     products.map((product,index) => (
-                    <div className='product-item' key={product._id}>{
-                        
-                    }
+                    <div className='product-item' key={product._id}>
                         <Link to={`/product/${removeVietnameseTones(product.name)}`}>
                         <img src={product.image} alt='temp-pic'></img>
                         <i class="fa fa-search product-info" aria-hidden="true"></i>
@@ -57,7 +54,7 @@ function Product({cateProduct}){
                                     </div>
                                     </Link>
                             <div className='product-item-bottom'>
-                                <Button onClick={()=>(console.log("Click!"))} type="button" buttonStyle="btn--addToCart--card">Thêm vào giỏ </Button>
+                                <Button onClick={()=> cart.handleAddToCart(product)} type="button" buttonStyle="btn--addToCart--card">Thêm vào giỏ </Button>
                             </div>
                         </div>
                     </div>

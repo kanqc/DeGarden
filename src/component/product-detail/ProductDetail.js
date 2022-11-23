@@ -4,6 +4,7 @@ import './ProductDetail.css';
 import Button from '../button/Button';
 import Footer from '../footer/Footer';
 import { productContext } from '../../Context/ProductContext';
+import { CartContext } from '../../Context/CartContext';
 import Product from '../product/Product';
 
 function ProductDetail({productDetail}) {
@@ -11,6 +12,7 @@ function ProductDetail({productDetail}) {
    
     const [product, setProduct] = [productDetail];
     const [products, setProducts] = useContext(productContext);
+    const cart = useContext(CartContext)
     const cateID = product.categoryId;
     const sameProduct = products.filter( productt =>{
         return productt.categoryId === cateID && productt._id != product._id;
@@ -51,7 +53,7 @@ function ProductDetail({productDetail}) {
                     <p className='product-detail-price'>{Intl.NumberFormat().format(product.price)} đ</p>
                     <p className='product-detail-decribtion'>{product.description}</p>
                     <p className='product-detail-quantity'>Số lượng: <input type={'number'} placeholder='1' className='input-quantity'></input></p>
-                    <div><Button onClick={()=>{console.log('Click!!!')}} type="button"  buttonStyle="btn--addToCart--detail">Thêm vào giỏ</Button></div>
+                    <div><Button onClick={()=>{cart.handleAddToCart(product)}} type="button"  buttonStyle="btn--addToCart--detail">Thêm vào giỏ</Button></div>
                 </div>
             </div>
             <h2 className='same-product'>Sản phẩm tương tự</h2>

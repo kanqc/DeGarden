@@ -7,6 +7,7 @@ import CartPage from './page/CartPage';
 import CategoryPage from './page/CategoryPage'
 import { CategoryProvider } from './Context/CategoryContext';
 import { ProductProvider } from './Context/ProductContext';
+import { CartProvider } from './Context/CartContext';
 import ProductDetailPage from './page/ProductDetailPage';
 import ScrollToTop from './component/ScrollToTop';
 import Login from './component/login/login'
@@ -18,20 +19,22 @@ function App() {
   return (
     <div>
       <ProductProvider>
-      <CategoryProvider>
-      <Navbar></Navbar>
-          <Routes>
-                  <Route path='/' element={<Home/>} />
-                  <Route path='/cart' element={<CartPage/>}/>
-                  <Route path='/Tat-ca-san-pham' element={<AllProductPage/>}/>
-                  <Route path='/:cateTitle' element={<CategoryPage/>}/>
-                  <Route path='/product/:productName' element={<ProductDetailPage/>}/>
-                  <Route path='/dang-nhap' element={<LoginPage/>}/>
-                  <Route path='/dang-ky' element={<RegisterPage/>}/>
-                  <Route path='/nhap-otp' element={<OtpPage/>}/>
-          </Routes>
-          <ScrollToTop/>
-      </CategoryProvider>
+      <CartProvider>
+        <CategoryProvider>
+        <Navbar></Navbar>
+            <Routes>
+                    <Route path='/' element={<Home/>} />
+                    <Route path='/cart' element={<CartPage/>}/>
+                    <Route path='/Tat-ca-san-pham' element={<AllProductPage/>}/>
+                    <Route path='/:cateTitle' element={<CategoryPage/>}/>
+                    <Route path='/product/:productName' element={<ProductDetailPage/>}/>
+                    <Route path='/dang-nhap' element={<LoginPage/>}/>
+                    <Route path='/dang-ky' element={<RegisterPage/>}/>
+                    <Route path='/nhap-otp' element={<OtpPage/>}/>
+            </Routes>
+            <ScrollToTop/>
+        </CategoryProvider>
+      </CartProvider>
       </ProductProvider>
 
     </div>

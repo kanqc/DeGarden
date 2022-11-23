@@ -12,7 +12,7 @@ function Button({children, type, onClick, buttonStyle}){
     
     const checkBtnStyle = btnStyle.includes(buttonStyle) ? buttonStyle : btnStyle[0];
     return(
-        <button className={`btn ${checkBtnStyle}`}>{children}</button>
+        <button className={`btn ${checkBtnStyle}`} onClick={onClick} type={type}>{children}</button>
     );
 }
 
