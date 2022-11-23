@@ -36,13 +36,22 @@ const Customers = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const queryUser = await axios.post(Customerservices.GRAPHQL_API, {
-        query: Customerservices.get_Users,
-      });
+      const queryUser = await axios.post(
+        Customerservices.GRAPHQL_API,
+        {
+          query: Customerservices.get_Users,
+        },
+        {
+          headers: {
+            "Content-Type": "application/json",
+            Authorization:
+              "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzM1NWE3NzJhYWYwMzM2MDVlYzNlOWEiLCJyb2xlIjoiQURNSU5fUk9MRSIsImlhdCI6MTY2OTEzOTMwMSwiZXhwIjoxNjcxNzMxMzAxfQ.m21ryLMqGkmPemWjs_m-r8K67OpN7ga5in49W-j-CYU",
+          },
+        }
+      );
+
       const result = queryUser.data.data;
       setData(result.getAllUsers.data);
-      // console.log(result.getAllBonsai.data);
-      // console.log(result);
     };
     // console.log(data);
     // {
