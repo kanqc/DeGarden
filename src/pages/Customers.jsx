@@ -44,9 +44,9 @@ const Customers = () => {
           'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzM1NWE3NzJhYWYwMzM2MDVlYzNlOWEiLCJyb2xlIjoiQURNSU5fUk9MRSIsImlhdCI6MTY2OTEzOTMwMSwiZXhwIjoxNjcxNzMxMzAxfQ.m21ryLMqGkmPemWjs_m-r8K67OpN7ga5in49W-j-CYU'
         }
       });
-      console.log(queryUser)
-      // const result = queryUser.data.data;
-      // setData(result.getAllUsers.data);
+
+      const result = queryUser.data.data;
+      setData(result.getAllUsers.data);
       
     };
 
