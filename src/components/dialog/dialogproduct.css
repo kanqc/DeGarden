@@ -1,93 +1,126 @@
-.form-textfield {
-    display: flex;
-    flex-direction: column;
+fieldset {
+    border: 1px solid black;
+
+    margin: 2em auto;
+    font-size: 20px;
 }
 
-.item {
-    width: 500px;
-}
-
-.left-form {
-    float: left;
-    display: block;
-}
-
-
-.right-form {
-    margin-left: 25px;
-    float: right;
-    display: block;
-
-}
-
-.text-error {
-    font-size: .75rem;
-    color: red;
-}
-
-.form-textfield {
-    width: 50%;
-}
-
-input[type=text] {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-
-    border: 3px solid rgb(151, 147, 147);
-    transition: 0.5s;
-    outline: none;
-}
-
-input[type=text]:focus {
-    border: 3px solid rgb(36, 35, 35);
-}
-
-.title {
-    width: 30em;
-}
-
-.name-input {
-    float: left;
-    font-size: 1rem;
-    font-weight: 500;
-    color: black;
-
-}
-
-.input-group {
-    margin-left: 4rem;
+fieldset p {
+    font-size: 35px;
     text-align: center;
-    width: 300px;
+    padding-top: 1.5em;
+}
+
+legend {
+    width: auto;
+    text-align: center;
+    font-size: 1rem;
+    padding: 0 1rem;
+}
+
+.fa-user-circle {
+    font-size: 40px;
+}
+
+.form-submit {
+    width: 40rem;
+}
+
+#name {
+    display: block;
+    margin: 1rem auto 1rem auto;
+    padding: 1em 0.5em;
+    width: 30rem;
+    border: 1px solid lightgray;
+    border-radius: 3px;
+}
+
+#description {
+    display: block;
+    padding: 1em 0.5em;
+    margin: 1rem auto 1rem auto;
+    width: 30rem;
+
+    border: 1px solid lightgray;
+    border-radius: 3px;
+}
+
+#quantity {
+    display: block;
+    margin: 1rem auto 1rem auto;
+    padding: 1em 0.5em;
+    width: 30rem;
+
+    border: 1px solid lightgray;
+    border-radius: 3px;
+}
+
+#price {
+    display: block;
+    margin: 1rem auto 1rem auto;
+    width: 30rem;
+    border: 1px solid lightgray;
+    border-radius: 3px;
+    height: 3rem;
+}
+
+#image {
+    display: block;
+    margin: 0 auto 1rem auto;
+    width: 30rem;
+    border: 1px solid lightgray;
+    border-radius: 3px;
+}
+
+
+
+.btn-log {
+    display: block;
+    margin: auto;
+    padding: 0.5rem 7.5rem;
+    margin-bottom: 5rem;
+    font-weight: bold;
+    background-color: #00e673;
+    border: none;
+    border-radius: 3px;
+    height: 3rem;
+}
+
+.btn-c {
+    display: block;
+    float: left;
+    margin-left: 4rem;
+    padding: 1rem 6rem;
+    margin-bottom: 5rem;
+    font-weight: bold;
+    background-color: #bdc0c6;
+    border: none;
+    border-radius: 5px;
+}
+
+.btn-s {
+    display: block;
+    float: right;
+    margin-right: 4rem;
+    padding: 1rem 6rem;
+    margin-bottom: 5rem;
+    font-weight: bold;
+    background-color: #5e9af2;
+    border: none;
+    border-radius: 5px;
+}
+
+fieldset .reg {
+    font-size: 15px;
+    text-align: center;
     margin-bottom: 1rem;
 }
 
-.btn-group {
-    /* justify-content: center;
-    margin: auto;
-    margin-left: 10em; */
+fieldset label {
+    margin-left: 5rem;
 }
 
-.btn-cancel {
-    display: block;
-    margin: auto;
-    background-color: rgba(157, 160, 162, 0.37);
-    margin-top: 1em;
-    width: 18em;
-    height: 4em;
-    font-size: 1em;
-
-}
-
-.btn-save {
-    display: inline-block;
-
-    color: white;
-    margin-top: 1em;
-    margin-left: 2em;
-    font-size: 1em;
-    background-color: rgb(37, 117, 223);
-    width: 14em;
-    height: 3em;
-
+.error {
+    font-size: 17px;
+    color: red;
 }

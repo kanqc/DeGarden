@@ -60,7 +60,13 @@ export default function FormDialogProduct({ open, handleClose }) {
   }, [product]);
 
   const sumbitHandler = (e) => {
-    console.log("nhấn chọn nè", product);
+    e.preventDefault();
+    console.log(productDetail);
+    document.documentElement.scrollTop = 0;
+    window.localStorage.setItem(
+      "PRODUCT-DETAIL",
+      JSON.stringify(productDetail)
+    );
   };
 
   return (
@@ -76,81 +82,52 @@ export default function FormDialogProduct({ open, handleClose }) {
         </DialogTitle>
         <DialogContent style={{ width: "100%" }}>
           <DialogContentText id="alert-dialog-description">
-            <div className="form-textfield">
+            <div className="form-submit">
               <form onSubmit={sumbitHandler}>
-                <div class="input-group mb-3">
-                  <div className="name-input">Tên sản phẩm</div>
+                <fieldset>
+                  <label>Tên Sản Phẩm: </label>
                   <input
                     type="text"
+                    id="name"
                     name="name"
-                    class="form-control"
-                    placeholder="Nhập tên sản phẩm..."
                     onChange={onChange}
                     value={product.name}
-                  />
-                </div>
-                <div class="input-group mb-3">
-                  <div className="name-input">Mô tả</div>
+                  ></input>
+                  <label>Mô Tả:</label>
                   <input
                     type="text"
+                    id="description"
                     name="description"
-                    class="form-control"
-                    placeholder="Nhập mô tả..."
                     onChange={onChange}
                     value={product.description}
-                  />
-                </div>
-                <div class="input-group mb-3">
-                  <div className="name-input">Số lượng</div>
+                  ></input>
+                  <label>Số Lượng:</label>
                   <input
-                    name="quantity"
                     type="text"
-                    class="form-control"
-                    placeholder="Nhập số lượng..."
+                    id="quantity"
+                    name="quantity"
                     onChange={onChange}
                     value={product.quantity}
-                  />
-                </div>
-                <div class="input-group mb-3">
-                  <div className="name-input">Giá</div>
+                  ></input>
+                  <label>Giá: </label>
                   <input
                     type="text"
+                    id="price"
                     name="price"
-                    class="form-control"
-                    placeholder="Nhập giá..."
                     onChange={onChange}
                     value={product.price}
-                  />
-                </div>
-                <div class="input-group mb-3">
-                  <div className="name-input">Hình ảnh</div>
+                  ></input>
+                  <label>Hình Ảnh: </label>
                   <input
-                    name="image"
                     type="file"
-                    class="form-control"
-                    // onChange={onChange}
-                    // value={product.image}
-                  />
-                </div>
-                <div className="btn-group">
-                  <DialogActions>
-                    <button className="btn-cancel" onClick={handleClose}>
-                      Hủy Bỏ
-                    </button>
-                    <button
-                      className="btn-save"
-                      type="submit"
-                      onClick={() => {
-                        sumbitHandler();
-                      }}
-                      variant="contained"
-                      color="primary"
-                      autoFocus
-                    >
-                      Lưu
-                    </button>
-                  </DialogActions>
-                </div>
+                    id="image"
+                    name="image"
+                    onChange={onChange}
+                    value={product.image}
+                  ></input>
+                  <input type="submit" value="Hủy" class="btn-c"></input>
+                  <input type="submit" value="Lưu" class="btn-s"></input>
+                </fieldset>
               </form>
             </div>
           </DialogContentText>
